@@ -6,8 +6,12 @@ import { BrowserRouter as Router,
 /* Import css */
 import './App.css';
 
+/* Import ROUTES */
+import * as ROUTES from '../../constants/routes';
+
 /* Import components */
 import Navigation from '../Navigation/Navigation';
+import Home from '../Home/Home';
 
 const App = () => {
   return (
@@ -15,7 +19,7 @@ const App = () => {
         <Router>
             <Navigation />
             <Switch>
-            
+              <Route exact path={ROUTES.HOME} component={Home} />
             </Switch>
         </Router>
     </div>
