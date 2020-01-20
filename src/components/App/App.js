@@ -12,6 +12,7 @@ import * as ROUTES from '../../constants/routes';
 /* Import components */
 import Navigation from '../Navigation/Navigation';
 import Home from '../Home/Home';
+import Projects from '../Projects/Projects';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Navigation />
             <Switch>
               <Route exact path={ROUTES.HOME} component={Home} />
+              <Route exact path={ROUTES.PROJECTS} component={Projects} />
             </Switch>
         </Router>
     </div>
