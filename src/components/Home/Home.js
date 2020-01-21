@@ -10,15 +10,23 @@ const Home = () => {
     return (
         <Fragment>
             <div className="about">
-                <img src={profile.img} alt="rick" />
-                <p className="intro"> 
-                    {profile.about}
-                </p>
-                <p className="looking">
-                    {profile.looking}
-                </p>
+                <div className="intro">
+                    <span>Hi!! I'm Ricardo</span>
+                    <img src={profile.img} alt="rick" />
+                    <p> 
+                        {profile.about}
+                    </p>
+                </div>
+                <div className="looking">
+                    <p>
+                        {profile.looking}
+                    </p>
+                </div>
+                <div className="skills">
+                    <span>Skills</span>
+                </div>
             </div>
-            
+            <span className="cards-title">What I've been working on</span>
             <Cards />
             <div className="invite">
                 {profile.invite}
@@ -31,7 +39,6 @@ const Cards = () => {
     //jobs comes from info.js
     return (
         <div className="cards">
-            <h5 className="working-header">What I've been working on</h5>
 
             {jobs.map((job, index) => {
                 return (

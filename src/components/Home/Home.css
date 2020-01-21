@@ -1,102 +1,176 @@
-img {
-    width: 50%;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 .about {
-    margin-top: 30px;
+    font-weight: 600;
+    background-color: #197BBD;
     display: grid;
-    background-color: #5E9AF9;
+    gap: 10px;
 }
 
-.about > img {
-    grid-area: img;
-    margin: 0 auto;
-    border-radius: 50%;
+.about > div {
+    border-radius: 10px;
+    background-color: #F3F4F5;
+    box-shadow: 10px -1px 20px 2px rgba(0,0,0,0.8);
 }
-.about > p {
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
+
+.about > div > span {
+    display: block;
+    padding: 12px 0 5px 0;
+    text-align: center;
+}
+
+.about > div > img {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 10px -1px 5px 2px rgba(0,0,0,0.2);
+}
+
+.about > div > p {
+    text-align: justify;
+    padding: 0.2em 1.5em;
 }
 
 .intro {
     grid-area: intro;
+
 }
 
 .looking {
     grid-area: looking;
+
+}
+
+.skills {
+    grid-area: skills;
+
+}
+
+.cards-title {
+    display: block;
+    padding: 20px 0 0px 0;
+    text-align: center;
+    color: #F3F4F5;
+    background-color: #404040;
+}
+
+.cards {
+    background-color: #404040;
+    display: flex;
+}
+
+.cards > div {
+    margin: 10px auto;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    border-radius: 10px;
+    background-color: #A0A0A0;
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 @media(min-width:320px) {
     .about {
-        margin-top: 30px;
-        border-radius: 82% 0 0 0;
-        gap: 5px;
+        margin-top: 40px;
+        padding: 20px 10px 30px 10px;
+        gap: 10px;
         grid-template-areas:
-        '. img img .'
-        '. . intro intro'
-        '. . looking looking';
+        'intro intro'
+        'looking looking'
+        'skills skills';
+    }
+    
+    .about > div {
+        font-size: 0.9em;
+        border-radius: 10px;
+        background-color: #F3F4F5;
+        box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
     }
 
-    .about > img {
-        margin-top: 30px;
-        width: 200px;
-        height: 200px;
+    .cards-title {
+        font-size: 1.2em;
     }
 
-    .intro, .looking  {
-        padding-right: 22px;
-        font-size: 1em;
-        line-height: 1.7em;
+    .cards {
+        flex-flow: column;
+        align-items: center;
+        padding: 40px 0 90px 0;
+        box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+    }
+
+    .card {
+        width: 90%;
+        height: 480px;
+    }
+    
+    .card > img {
+        height: 250px;
     }
 }
 
 @media(min-width:768px) {
     .about {
-        margin-top: 30px;
-        border-radius: 82% 0 0 0;
-        gap: 10px;
-        grid-template-areas:
-        '. img img .'
-        '. . intro intro'
-        '. . looking looking';
+        margin-top: 55px;
     }
 
-    .about > img {
-        margin-top: 30px;
-        width: 230px;
-        height: 230px;
+    .cards {
+        flex-flow: row;
+        align-items: baseline;
+        padding: 50px 0 90px 0;
     }
 
-    .intro, .looking  {
-        width: 85%;
-        padding-left: 60px;
-        font-size: 1.1em;
-        line-height: 2em;
+    .card {
+        width: 30%;
+        height: 550px;
+    }
+    
+    .card > img {
+        height: 250px;
     }
 }
 
 @media(min-width:1024px) {
     .about {
-        margin-top: 30px;
-        border-radius: 85% 0 0 0;
+        margin-top: 50px;
+        padding: 55px 50px 80px 50px;
         gap: 10px;
         grid-template-areas:
-        '. . . img img .'
-        '. . . . intro intro'
-        '. . . . looking looking';
+        'intro intro looking looking'
+        'intro intro skills skills'
+        'intro intro skills skills'
+        'intro intro skills skills';
+    }
+    
+    .about > div {
+        border-radius: 10px;
+        background-color: #F3F4F5;
+        box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
     }
 
-    .about > img {
-        margin-top: 30px;
-        width: 250px;
+    .cards-title {
+        font-size: 2em;
+    }
+
+    .cards {
+        flex-flow: row;
+        align-items: baseline;
+        padding: 50px 0 90px 0;
+    }
+
+    .card {
+        width: 30%;
+        height: 450px;
+    }
+    
+    .card > img {
         height: 250px;
     }
-
-    .intro, .looking  {
-        width: 70%;
-        margin-left: 20%;
-        font-size: 1.1em;
-        line-height: 2em;
-    }
 }
+
+
