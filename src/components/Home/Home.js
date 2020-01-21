@@ -11,15 +11,14 @@ const Home = () => {
         <Fragment>
             <div className="about">
                 <img src={profile.img} alt="rick" />
-                <p>
+                <p className="intro"> 
                     {profile.about}
+                </p>
+                <p className="looking">
+                    {profile.looking}
                 </p>
             </div>
             
-            <p className="looking">
-                {profile.looking}
-            </p>
-
             <Cards />
             <div className="invite">
                 {profile.invite}

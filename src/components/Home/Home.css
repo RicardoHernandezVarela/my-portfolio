@@ -2,3 +2,101 @@ img {
     width: 50%;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+.about {
+    margin-top: 30px;
+    display: grid;
+    background-color: #5E9AF9;
+}
+
+.about > img {
+    grid-area: img;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.about > p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.intro {
+    grid-area: intro;
+}
+
+.looking {
+    grid-area: looking;
+}
+
+@media(min-width:320px) {
+    .about {
+        margin-top: 30px;
+        border-radius: 82% 0 0 0;
+        gap: 5px;
+        grid-template-areas:
+        '. img img .'
+        '. . intro intro'
+        '. . looking looking';
+    }
+
+    .about > img {
+        margin-top: 30px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .intro, .looking  {
+        padding-right: 22px;
+        font-size: 1em;
+        line-height: 1.7em;
+    }
+}
+
+@media(min-width:768px) {
+    .about {
+        margin-top: 30px;
+        border-radius: 82% 0 0 0;
+        gap: 10px;
+        grid-template-areas:
+        '. img img .'
+        '. . intro intro'
+        '. . looking looking';
+    }
+
+    .about > img {
+        margin-top: 30px;
+        width: 230px;
+        height: 230px;
+    }
+
+    .intro, .looking  {
+        width: 85%;
+        padding-left: 60px;
+        font-size: 1.1em;
+        line-height: 2em;
+    }
+}
+
+@media(min-width:1024px) {
+    .about {
+        margin-top: 30px;
+        border-radius: 85% 0 0 0;
+        gap: 10px;
+        grid-template-areas:
+        '. . . img img .'
+        '. . . . intro intro'
+        '. . . . looking looking';
+    }
+
+    .about > img {
+        margin-top: 30px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .intro, .looking  {
+        width: 70%;
+        margin-left: 20%;
+        font-size: 1.1em;
+        line-height: 2em;
+    }
+}
