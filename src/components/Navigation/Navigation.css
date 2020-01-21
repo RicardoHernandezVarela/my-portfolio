@@ -16,7 +16,7 @@ a {
 .menu {
     display: none;
     color: #f5f5f5;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 10px 0;
 }
 
 .navegacion {
@@ -39,7 +39,6 @@ a {
     padding: 5px;
     text-align: center;
     font-weight: 600;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navegacion > li > a {
@@ -60,9 +59,9 @@ a {
     }
 
     .navegacion > li {
-        padding: 5px;
+        padding: 10px 0;
         text-align: center;
-        font-size: 0.8em;
+        font-size: 1em;
     }
 }
 
