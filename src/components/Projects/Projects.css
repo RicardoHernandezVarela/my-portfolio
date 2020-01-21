@@ -1,0 +1,87 @@
+.projects {
+    display: block;
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 60%;
+}
+
+.project {
+    display: grid;
+    grid-gap: 10px;
+    padding: 0 0 10px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.project > span {
+    grid-area: name;
+    text-align: center;
+    background-color: #80cbc4;
+    border-radius: 10px 10px 0 0;
+    height: 50px;
+}
+
+.project > img {
+    grid-area: img;
+    border-radius: 10px;
+    
+    width: 100%;
+}
+
+.project > p {
+    grid-area: desc;
+    text-align: justify;
+    padding: 0.8em;
+    margin: 5px auto;
+}
+
+.project > ul {
+    grid-area: list;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.project > ul > li{
+    display: inline;
+    padding: 2px;
+    font-size: 0.8em;
+}
+
+.project > div {
+    grid-area: visit;
+    text-align: center;
+}
+
+.project > div a{
+    padding: 8px 8px 0 8px;
+}
+
+@media(min-width:320px) {
+    .project {
+        grid-template-areas:
+        'name name name'
+        'img img img'
+        'desc desc desc'
+        '. list .'
+        'visit visit visit';
+    }
+
+    .projects {
+        width: 90%;
+    }
+}
+
+@media(min-width:1024px) {
+    .projects {
+        width: 60%;
+    }
+
+    .project {
+        grid-template-areas:
+        'name name name name name name'
+        'img img img img desc desc'
+        'img img img img list list'
+        'img img img img visit visit';
+    }
+}
