@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import './Home.css';
 
 /* Profile info */
-import { profile, jobs, logos } from '../../info/info';
+import { profile, jobs, logos, toolsSkills } from '../../info/info';
 
 const Home = () => {
     return (
@@ -23,10 +23,12 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="skills">
-                    <span>Tools and Skills</span>
-                    <img src={"https://facebook.github.io/react-native/img/header_logo.svg"} alt="react"/>
+                    <span>Tools</span>
+                    <Skills skills={toolsSkills}/>
                 </div>
+                
             </div>
+
             <span className="cards-title">What I've been working on</span>
             <Cards />
             <div className="checkout">
@@ -77,5 +79,24 @@ const MultipleLogos = (props) => {
         </div>
     );
 }
+
+const Skills = (props) => {
+    const skills = props.skills;
+
+    return (
+        <div className="tools-skills">
+            {skills.map((skill, index) => {
+                return (
+                    <div className="skill-tech" key={index}>
+                        <img src={skill.img} alt="react"/>
+                        <h4>{skill.name}</h4>
+                    </div>
+                );
+            })}
+        </div>
+    )
+}
+
+export { MultipleLogos };
 
 export default Home;

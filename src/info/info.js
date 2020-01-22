@@ -3,14 +3,14 @@ const profile = {
     about: `
         I love building things, I'm doing it now using web technologies and 
         loving my learning adventure with React.
-        I've been involved in coding for a few years, since teaching Arduino and being 
+        I've been involved in coding for a few years, from teaching Arduino and being 
         a team coach for robotics competitions to work developing a web application to
         record and analize biosignals and also do some research on automatic smell recognition
         using machine learning and signal processing.
     `,
     looking: `
         I´m currently looking for remote positions for frontend development, mainly React related but 
-        willing to learn any other technologies the pation to solve problems using code has taught me 
+        willing to learn any other technologies the passion to solve problems using code has taught me 
         to never stop learning.
     `,
     checkout: `
@@ -60,20 +60,78 @@ const jobs = [
 const logos = [
     {
         url: "https://github.com/RicardoHernandezVarela",
-        img: "https://github.com/fluidicon.png",
+        img: "https://i.ibb.co/gm7BJcv/fluidicon.png",
     },
     {
         url: "https://twitter.com/RVarela0111",
-        img: "https://abs.twimg.com/responsive-web/web/icon-ios.8ea219d4.png",
+        img: "https://i.ibb.co/2NycMmJ/twitter.png",
     },
     {
         url: "mailto:hernandez.varela.dev@gmail.com",
-        img: "https://icons-for-free.com/iconfiles/png/512/google+mail+icon-1320192249286867468.png",
+        img: "https://i.ibb.co/Fn15VLN/gmail.png",
     },
     {
         url: "https://www.linkedin.com/in/ricardo-varela-015a99199/",
-        img: "https://cdn3.iconfinder.com/data/icons/social-icons-5/606/LinkedIn.png",
+        img: "https://i.ibb.co/g7KVc8z/LinkedIn.png",
+    },
+];
+
+const toolsSkills = [
+    {
+        img: "http://icons.veryicon.com/256/System/Plex/Other%20html%205.png",
+        name: "HTML",
+        level: "Intermediate",
+    },
+    {
+        img: "https://facebook.github.io/react-native/img/header_logo.svg",
+        name: "CSS",
+        level: "Intermediate",
+    },
+    {
+        img: "https://ya-webdesign.com/images250_/vector-javascript-1.png",
+        name: "JavaScript",
+        level: "Intermediate",
+    },
+    {
+        img: "https://facebook.github.io/react-native/img/header_logo.svg",
+        name: "React",
+        level: "Learning",
+    },
+    {
+        img: "https://gitlab.com/uploads/-/system/project/avatar/10272305/logo-react-router.png",
+        name: "React router",
+        level: "Learning",
+    },
+    {
+        img: "https://redux.js.org/img/redux.svg",
+        name: "Redux",
+        level: "Learning",
+    },
+    {
+        img: "https://cdn.icon-icons.com/icons2/1508/PNG/512/python_104451.png",
+        name: "Python",
+        level: "Intermediate",
+    },
+    {
+        img: "https://img.stackshare.io/service/994/4aGjtNQv.png",
+        name: "Django",
+        level: "Intermediate",
+    },
+    {
+        img: "https://stickeroid.com/uploads/pic/full/thumb/stickeroid_5bf5475aa0ad1.png",
+        name: "Git",
+        level: "Intermediate",
+    },
+    {
+        img: "https://www.netlify.com/img/global/favicon/apple-touch-icon.png",
+        name: "Netlify",
+        level: "Basic",
+    },
+    {
+        img: "https://i.ibb.co/gm7BJcv/fluidicon.png",
+        name: "GitHub",
+        level: "Basic",
     },
 ]
 
-export { profile, jobs, logos };
+export { profile, jobs, logos, toolsSkills };

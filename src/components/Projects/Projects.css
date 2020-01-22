@@ -1,8 +1,8 @@
 .projects {
     display: block;
-    margin: 0 auto;
+    width: 100%;
     padding-top: 80px;
-    width: 60%;
+    background-color: #252525;
 }
 
 .project {
