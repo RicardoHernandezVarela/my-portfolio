@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #F3F4F5;
+    background-color: #197BBD;
     font-family: 'Playfair Display', serif;
 }
 
@@ -13,4 +13,5 @@ body {
     display: block;
     padding: 0;
     margin: 0 auto;
+    width: 100%;
 }

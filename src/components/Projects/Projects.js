@@ -6,26 +6,22 @@ import './Projects.css';
 /* Import projects */
 import { projectsList } from '../../info/projects';
 
-/* Import imgs */
-const github = 'https://i.ibb.co/Y8p4Mgr/Git-Hub-Mark.png';
-const site = 'https://i.ibb.co/6Z3PTvz/link.png';
-
 const Projects = () => {
     return (
         <div className="projects">
             {projectsList.map((project, index) => {
                 return (
-                    <div key={index} className="project">
+                    <div key={index} className="project fadeInUp">
                         <span>{project.name}</span>
                         <img src={project.img} alt="GIF"/>
                         <p>{project.description}</p>
                         <StackList project={project}/>
                         <div>
                             <a href={project.repourl}>
-                                <img src={github} alt="github"/>
+                                Check repo
                             </a>
                             <a href={project.site}>
-                                <img src={site} alt="site"/>
+                                Visit site
                             </a>
                         </div>
                     </div>

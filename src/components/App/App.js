@@ -13,6 +13,7 @@ import * as ROUTES from '../../constants/routes';
 import Navigation from '../Navigation/Navigation';
 import Home from '../Home/Home';
 import Projects from '../Projects/Projects';
+import Teaching from '../Teaching/Teaching';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Switch>
               <Route exact path={ROUTES.HOME} component={Home} />
               <Route exact path={ROUTES.PROJECTS} component={Projects} />
+              <Route exact path={ROUTES.TEACHING} component={Teaching} />
             </Switch>
         </Router>
     </div>

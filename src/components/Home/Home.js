@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react';
 
+/* Import components */
+import { Cards, MultipleLogos, Skills, Check } from './HomeComponents';
+
 /* Import CSS */
 import './Home.css';
 
@@ -17,11 +20,13 @@ const Home = () => {
                         {profile.about}
                     </p>
                 </div>
+
                 <div className="looking">
                     <p>
                         {profile.looking}
                     </p>
                 </div>
+                
                 <div className="skills">
                     <span>Tools</span>
                     <Skills skills={toolsSkills}/>
@@ -30,73 +35,21 @@ const Home = () => {
             </div>
 
             <span className="cards-title">What I've been working on</span>
-            <Cards />
-            <div className="checkout">
+            <Cards jobs={jobs} />
+
+            <Check>
                 <p>{profile.checkout}</p>
-            </div>
+            </Check>
+
             <div className="contact">
-                {profile.contact}
-                <MultipleLogos source={logos} />
+                <p>
+                    {profile.contact}
+                </p>
+                <MultipleLogos logos={logos} />
             </div>
         </Fragment>
     );
 }
 
-const Cards = () => {
-    //jobs comes from info.js
-    return (
-        <div className="cards">
-
-            {jobs.map((job, index) => {
-                return (
-                    <div className="card" key={index}>
-                        <img src={job.img} alt="rick" />
-                        <span className="job-title">{job.title}</span>
-                        
-                        <p>{job.description}</p>
-                        <span>{job.period}</span> 
-                    </div>
-                );
-            })
-            }
-        </div>
-    );
-}
-
-const MultipleLogos = (props) => {
-    const logos = props.source;
-    return (
-        <div className="contact-logos">
-
-            {logos.map((logo, index) => {
-                return (
-                    <a href={logo.url} key={index} rel="external">
-                        <img src={logo.img} alt="logo" />
-                    </a>
-                );
-            })
-            }
-        </div>
-    );
-}
-
-const Skills = (props) => {
-    const skills = props.skills;
-
-    return (
-        <div className="tools-skills">
-            {skills.map((skill, index) => {
-                return (
-                    <div className="skill-tech" key={index}>
-                        <img src={skill.img} alt="react"/>
-                        <h4>{skill.name}</h4>
-                    </div>
-                );
-            })}
-        </div>
-    )
-}
-
-export { MultipleLogos };
 
 export default Home;
