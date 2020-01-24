@@ -93,7 +93,23 @@ const teachingResources = {
             "action": "See"
         }
     ],
-    materials: [
+    resources: [
+        {
+            "title": "How to connect the browser with a bluetooth device",
+            "topic": "Arduino",
+            "desc": "An example to connect a bluetooth device with a web app.",
+            "link": "https://github.com/RicardoHernandezVarela/webBT",
+            "action": "Download"
+        },
+        {
+            "title": "How to connect the browser with a bluetooth device",
+            "topic": "Arduino",
+            "desc": "An example to connect a bluetooth device with a web app.",
+            "link": "https://github.com/RicardoHernandezVarela/webBT",
+            "action": "Download"
+        }
+    ], 
+    notes: [
         {
             "title": "How to connect the browser with a bluetooth device",
             "topic": "Arduino",

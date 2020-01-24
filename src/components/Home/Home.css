@@ -1,13 +1,20 @@
+:root{
+    --background: #c1c1c1;
+    --color: #F3F4F5;
+    --darkcolor: #404040;
+    --contact: #114B5F;
+}
+
 .about {
     font-weight: 600;
-    background-color: #197BBD;
+    background-color: var(--background);
     display: grid;
     gap: 10px;
 }
 
 .about > div {
     border-radius: 10px;
-    background-color: #F3F4F5;
+    background-color: #fff;
     box-shadow: 10px -1px 20px 2px rgba(0,0,0,0.8);
 }
 
@@ -50,12 +57,12 @@
     display: block;
     padding: 20px 0 0px 0;
     text-align: center;
-    color: #F3F4F5;
-    background-color: #252525;
+    color: var(--darkcolor);
+    background-color: var(--background);
 }
 
 .cards {
-    background-color: #252525;
+    background-color: var(--background);
     display: flex;
 }
 
@@ -100,8 +107,8 @@
 .checkout {
     display: block;
     text-align: center;
-    color: #F3F4F5;
-    background-color: #252525;
+    color: var(--darkcolor);
+    background-color: var(--background);
 }
 
 .checkout > p {
@@ -115,14 +122,14 @@
 .contact {
     display: block;
     text-align: center;
-    color: #F3F4F5;
-    background-color: #FF7C39;
+    color: var(--color);
+    background-color: var(--contact);
     padding: 20px 10px 30px 10px;
 }
 
 .contact-logos {
     margin-top: 30px;
-    background-color: #FF7C39;
+    background-color: var(--contact);
 }
 
 .contact-logos > a  {
@@ -133,7 +140,6 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    color: #FF7C39;
 }
 
 .contact-logos > a > img:hover {

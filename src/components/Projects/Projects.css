@@ -1,5 +1,5 @@
 .projects {
-    background-color: #197BBD;
+    height: 100vh;
     margin: 0 auto;
     padding-top: 68px;
     display: flex;
@@ -21,7 +21,7 @@
     'list list list'
     'visit visit visit';
 
-    background-color: #252525;
+    background-color: #404040;
     color: #fff;
     border-radius: 10px;
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);

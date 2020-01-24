@@ -12,7 +12,8 @@ class Teaching extends Component {
 
         this.state = {
             tutorials: false,
-            materials: false,
+            resources: false,
+            notes: false,
         }
     }
 
@@ -32,11 +33,18 @@ class Teaching extends Component {
                     <RenderList items={teachingResources.tutorials} element={this.state.tutorials} />
                 </div>
                 <div className="content">
-                    <span className="active-show" onClick={() => this.handleClick('materials')}>
+                    <span className="active-show" onClick={() => this.handleClick('resources')}>
                         <i class="material-icons">code</i>
                     </span>
-                    <span className="type">MATERIALS</span>
-                    <RenderList items={teachingResources.materials} element={this.state.materials} />
+                    <span className="type">RESOURCES</span>
+                    <RenderList items={teachingResources.resources} element={this.state.resources} />
+                </div>
+                <div className="content">
+                    <span className="active-show" onClick={() => this.handleClick('notes')}>
+                        <i class="material-icons">code</i>
+                    </span>
+                    <span className="type">CLASS NOTES</span>
+                    <RenderList items={teachingResources.notes} element={this.state.notes} />
                 </div>
             </div>
         );
