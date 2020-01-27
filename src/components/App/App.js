@@ -18,13 +18,18 @@ import Teaching from '../Teaching/Teaching';
 const App = () => {
   return (
     <div className="app">
+      <span class="menu"> > </span>
         <Router>
             <Navigation />
             <Switch>
-              <Route exact path={ROUTES.HOME} component={Home} />
-              <Route exact path={ROUTES.PROJECTS} component={Projects} />
-              <Route exact path={ROUTES.TEACHING} component={Teaching} />
+              <div className="main-content">
+                <div class="header"></div>
+                  <Route exact path={ROUTES.HOME} component={Home} />
+                  <Route exact path={ROUTES.PROJECTS} component={Projects} />
+                  <Route exact path={ROUTES.TEACHING} component={Teaching} />
+              </div>
             </Switch>
+
         </Router>
     </div>
   );

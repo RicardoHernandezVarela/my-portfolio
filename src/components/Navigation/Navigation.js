@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
 /* Importar CSS */
-import './Navigation.css';
+//import './Navigation.css';
 
 /* Importar rutas */
 import * as ROUTES from '../../constants/routes';
@@ -45,7 +45,7 @@ class Navigation extends Component {
 
     render() {
         return (
-            <div className="nav-bar">
+            <div className="sidenav">
                 <span onClick={this.handleShowNavbar}>
                     <i className="material-icons menu">menu</i>
                 </span>

@@ -8,6 +8,7 @@ import { projectsList } from '../../info/projects';
 
 const Projects = () => {
     return (
+        
         <div className="projects">
             {projectsList.map((project, index) => {
                 return (

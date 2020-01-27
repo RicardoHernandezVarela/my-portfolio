@@ -135,12 +135,20 @@
  Other devices
 ***************************************************/
 @media(min-width:320px){
+    .teaching {
+        margin-top: 40px;
+    }
+
     .content {
         width: 80%;
     }
 }
 
 @media(min-width:768px){
+    .teaching {
+        margin-top: 55px;
+    }
+
     .content {
         width: 60%;
     }
