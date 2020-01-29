@@ -27,7 +27,7 @@ body {
     border-radius: 50%;
     background-color: #3A3838;
     color: #fff;
-    margin: 85vh 0 0 82vw;
+    margin: 80vh 0 0 82vw;
     padding: 8px;
     text-align: center;
     opacity: 0.6;
@@ -44,7 +44,7 @@ body {
     color: #CF9CA3;
     border-radius: 0;
     border: none; outline: none;
-    box-shadow: 7px -1px 8px -1px rgba(0,0,0,0.2);
+    box-shadow: 7px -1px 8px 5px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -67,9 +67,8 @@ body {
 @media(min-width:320px) {
     .sidenav {
         display: none;
-        width: 45%;
+        width: 170px;
         position: fixed;
-        z-index: 3;
     }
 
     .main-content {
@@ -87,7 +86,7 @@ body {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:500px) {
     .sidenav {
         display: block;
         position: fixed;

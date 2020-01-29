@@ -2,13 +2,22 @@ a {
     text-decoration: none;
 }
 
+.nav-show {
+    display: block;
+}
+
+.nav-hide {
+    display: none;
+}
+
 .sidenav-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     display: block;
-    margin: 35px auto;
+    margin: 40px auto;
     margin-bottom: 20px;
+    box-shadow: 1px 3px 8px 7px rgba(0,0,0,0.3);
 }
 
 .sidenav > h3 {
@@ -25,61 +34,83 @@ a {
     list-style: none;
     padding: 0;
     margin: 30px auto;
+    display: flex;
+    flex-flow: column;
     align-items: center;
 }
 
-.nav-show {
-    display: block;
-}
-
-.nav-hide {
-    display: none;
-}
-
 .navegacion > li {
-    padding: 5px;
     text-align: center;
-    font-weight: 600;
+    width: 100%;
 }
 
 .navegacion > li > a {
     color: #e6e6e6;
 }
 
+.active {
+    display: block;
+    background-color: #707070;
+}
+
+.contact-options {
+    text-align: center;
+}
+
+.contact-options > a  {
+    padding: 8px 8px 0 8px;
+}
+
+.contact-options > a > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.contact-options > a > img:hover {
+    transform: translateY(-3px);
+}
+
 /* Otros dispositivos */
 @media(min-width: 320px) {
-    .menu {
-        display: block;
-        text-align: center;
+    .sidenav-img {
+        margin-top: 48px;
     }
 
     .navegacion {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
+        margin-bottom: 30px;
     }
 
     .navegacion > li {
-        padding: 10px 0;
-        text-align: center;
+        padding: 5px 0;
         font-size: 1em;
     }
+
+    .contact-options {
+        margin-top: 35px;
+        text-align: center;
+    }
+
 }
 
 @media(min-width: 768px) {
-    .menu {
-        display: none;
+    .sidenav-img {
+        margin-top: 40px;
     }
 
     .navegacion {
-        display: flex;
-        flex-direction: column;
-        margin: 5px auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .navegacion > li {
-        padding: 10px 10px 5px 10px;
-        text-align: center;
-        font-size: 1em;
+        padding: 10px 0 5px 0;
+        font-size: 0.85em;
     }
+
+    .contact-options {
+        margin-top: 55px;
+        text-align: center;
+    }
+
 }

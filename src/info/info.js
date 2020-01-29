@@ -67,10 +67,6 @@ const logos = [
         img: "https://i.ibb.co/2NycMmJ/twitter.png",
     },
     {
-        url: "mailto:hernandez.varela.dev@gmail.com",
-        img: "https://i.ibb.co/Fn15VLN/gmail.png",
-    },
-    {
         url: "https://www.linkedin.com/in/ricardo-varela-015a99199/",
         img: "https://i.ibb.co/g7KVc8z/LinkedIn.png",
     },
