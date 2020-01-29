@@ -18,7 +18,6 @@ import Teaching from '../Teaching/Teaching';
 const App = () => {
   return (
     <div className="app">
-      <span class="menu"> > </span>
         <Router>
             <Navigation />
             <Switch>

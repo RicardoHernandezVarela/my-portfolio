@@ -41,6 +41,7 @@ body {
 .sidenav {
     height: 100vh;
     background-color: #3A3838;
+    color: #CF9CA3;
     border-radius: 0;
     border: none; outline: none;
     box-shadow: 7px -1px 8px -1px rgba(0,0,0,0.2);

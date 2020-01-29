@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
 /* Importar CSS */
-//import './Navigation.css';
+import './Navigation.css';
 
 /* Importar rutas */
 import * as ROUTES from '../../constants/routes';
+import profileImg from '../../img/flower.jpg';
 
 class Navigation extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            navClass: "nav-show",
+            navClass: "sidenav nav-show",
         };
 
         this.actualPath = '/';
@@ -25,9 +26,9 @@ class Navigation extends Component {
 
     handleShowNavbar = () =>  {
         const navbarState = this.state.navClass;
-        navbarState === "nav-show" ?
-            this.setState({navClass: "nav-hide"}):
-            this.setState({navClass: "nav-show"});
+        navbarState === "sidenav nav-show" ?
+            this.setState({navClass: "sidenav nav-hide"}):
+            this.setState({navClass: "sidenav nav-show"});
     }
 
     componentDidUpdate() {
@@ -36,7 +37,7 @@ class Navigation extends Component {
     
         if (actualPath !== newPath) {
             if (window.outerWidth < 768) {
-                this.setState({navClass: "nav-hide"});
+                this.setState({navClass: "sidenav nav-hide"});
             }
         }
 
@@ -45,12 +46,14 @@ class Navigation extends Component {
 
     render() {
         return (
-            <div className="sidenav">
-                <span onClick={this.handleShowNavbar}>
-                    <i className="material-icons menu">menu</i>
+            <Fragment>
+                <span class="menu" onClick={this.handleShowNavbar}>
+                <i className="material-icons">menu</i>
                 </span>
-    
                 <div className={this.state.navClass}>
+                    <img className="sidenav-img" src={profileImg} alt="profile"/>
+                    <h3>Ricardo Varela</h3>
+                    <h5>Front-end developer</h5>
                     <ul className="navegacion">
                         <li>
                             <NavLink exact activeStyle={this.activeStyle} to={ROUTES.HOME}>About me</NavLink>
@@ -69,7 +72,8 @@ class Navigation extends Component {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </Fragment>
+
         );
     }
 }
