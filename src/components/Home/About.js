@@ -67,10 +67,30 @@ class About extends Component {
                     </div>
                 </div>
 
-                <h3>Tools</h3>
+                <div className="my-tools">
+                    <h3>Tools</h3>
+                    <Skills skills={toolsSkills}/>
+                </div>
             </Fragment>
         )
     }
 }
+
+const Skills = (props) => {
+    const skills = props.skills;
+
+    return (
+        <div className="tools-skills">
+            {skills.map((skill, index) => {
+                return (
+                    <div className="skill-tech" key={index}>
+                        <img src={skill.img} alt="react"/>
+                        <h4>{skill.name}</h4>
+                    </div>
+                );
+            })}
+        </div>
+    )
+};
 
 export default About;
