@@ -6,10 +6,6 @@ a {
     display: block;
 }
 
-.nav-hide {
-    display: none;
-}
-
 .sidenav-img {
     width: 120px;
     height: 120px;
@@ -51,6 +47,7 @@ a {
 .active {
     display: block;
     background-color: #707070;
+    border-radius: 10px;
 }
 
 .contact-options {
@@ -78,7 +75,11 @@ a {
     }
 
     .navegacion {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+    }
+
+    .nav-hide {
+        display: none;
     }
 
     .navegacion > li {
@@ -88,6 +89,7 @@ a {
 
     .contact-options {
         margin-top: 35px;
+        margin-bottom: 5px;
         text-align: center;
     }
 
@@ -99,8 +101,12 @@ a {
     }
 
     .navegacion {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .nav-hide {
+        display: block;
     }
 
     .navegacion > li {
@@ -109,8 +115,21 @@ a {
     }
 
     .contact-options {
-        margin-top: 55px;
+        margin-top: 40px;
         text-align: center;
     }
 
 }
+
+@media(min-width: 1024px) {
+    .navegacion {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .contact-options {
+        margin-top: 70px;
+    }
+}
+
+

@@ -47,7 +47,7 @@ class Navigation extends Component {
     render() {
         return (
             <Fragment>
-                <span class="menu" onClick={this.handleShowNavbar}>
+                <span className="menu" onClick={this.handleShowNavbar}>
                     <i className="material-icons">menu</i>
                 </span>
 

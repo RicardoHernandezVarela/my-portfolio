@@ -27,21 +27,21 @@ class Teaching extends Component {
             <div className="teaching">
                 <div className="content">
                     <span className="active-show" onClick={() => this.handleClick('tutorials')}>
-                        <i class="material-icons">code</i>
+                        <i className="material-icons">code</i>
                     </span>
                     <span className="type">TUTORIALS</span>
                     <RenderList items={teachingResources.tutorials} element={this.state.tutorials} />
                 </div>
                 <div className="content">
                     <span className="active-show" onClick={() => this.handleClick('resources')}>
-                        <i class="material-icons">code</i>
+                        <i className="material-icons">code</i>
                     </span>
                     <span className="type">RESOURCES</span>
                     <RenderList items={teachingResources.resources} element={this.state.resources} />
                 </div>
                 <div className="content">
                     <span className="active-show" onClick={() => this.handleClick('notes')}>
-                        <i class="material-icons">code</i>
+                        <i className="material-icons">code</i>
                     </span>
                     <span className="type">CLASS NOTES</span>
                     <RenderList items={teachingResources.notes} element={this.state.notes} />

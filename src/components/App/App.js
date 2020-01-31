@@ -20,15 +20,15 @@ const App = () => {
     <div className="app">
         <Router>
             <Navigation />
-            <Switch>
+            
               <div className="main-content">
-                <div class="header"></div>
-                  <Route exact path={ROUTES.HOME} component={Home} />
-                  <Route exact path={ROUTES.PROJECTS} component={Projects} />
-                  <Route exact path={ROUTES.TEACHING} component={Teaching} />
+                <div className="header"></div>
+                  <Switch>
+                    <Route exact path={ROUTES.HOME} component={Home} />
+                    <Route exact path={ROUTES.PROJECTS} component={Projects} />
+                    <Route exact path={ROUTES.TEACHING} component={Teaching} />
+                  </Switch>
               </div>
-            </Switch>
-
         </Router>
     </div>
   );
