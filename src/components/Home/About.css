@@ -3,7 +3,6 @@
     background-position: center;
     display: block;
     margin: 0 auto;
-    margin-top: -21px;
     width: 100%;
     height: 101vh;
     align-items: center;
@@ -24,7 +23,7 @@
 }
 
 .profile p {
-    margin: 25px auto;
+    margin: 20px auto;
     text-align: center;
     font-weight: 500;
 }
@@ -63,21 +62,23 @@ i:hover {
 .roles-name {
     background-color: #0473C3;
     color: #F2F2F2;
-    padding: 10px;
-    min-width: 200px;
+    padding: 10px 0 10px 0;
     text-align: center;
+    width: 224px;
 }
 
 .show-roles > img {
     border-radius: 10px;
     box-shadow: 1px 3px 10px 2px rgba(0,0,0,0.3);
-    max-height: 250px;
 }
 
+/* MY TOOLS */
 .my-tools {
     text-align: center;
-    margin: 20px auto;
-    margin-bottom: 50px;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    color: #CF9CA3;
+    padding-top: 10px;
 }
 
 .tools-skills {
@@ -90,10 +91,9 @@ i:hover {
     padding: 15px 0 10px 0;
     justify-content: center;
 
-    width: 80%;
     border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 1px 3px 10px 2px rgba(0,0,0,0.3);
+    background-color: #EDDBDD;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.3);
 }
 
 .skill-tech {
@@ -105,7 +105,7 @@ i:hover {
     grid-template-areas:
     'img name'
     'img name';
-    background-color: #F3F4F5;
+    background-color: #F2F2F2;
     box-shadow: 1px -1px 2px 2px rgba(0,0,0,0.3);
     border-radius: 25px;
 }
@@ -124,13 +124,63 @@ i:hover {
     margin: 8px 5px 0 0;
     font-size: 0.8em;
     font-weight: 600;
+    color: #3A3838;
 }
 
-.skill-tech > span {
-    grid-area: level;
-    margin-bottom: 4px;
-    font-size: 0.67em;
-    font-weight: 400;
+/* MY WORK EXPERIENCE */
+.working-on {
+    text-align: center;
+    margin: 20px auto;
+    color: #CF9CA3;
+}
+
+.working-on > h2 {
+    margin: 5px auto;
+} 
+
+.work-experience {
+    display: flex;
+}
+
+.work-experience > div {
+    margin: 10px auto;
+}
+
+.experience {
+    display: flex;
+    flex-flow: column;
+    border-radius: 10px;
+    font-weight: 200;
+    color: #F5F5F5;
+    background-color: #252525;
+    box-shadow: 1px 1px 8px 2px rgba(0,0,0,0.3);
+}
+
+.experience:hover {
+    transform: translateY(-10px);
+}
+
+.experience > img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    border-bottom: solid 1px #3A3838;
+}
+
+.experience > span {
+    text-align: center;
+    padding: 7px 0;
+}
+
+.experience > p {
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 0.9em;
+    line-height: 1.7em;
+}
+
+.experience-period {
+    margin: 10px auto;
+    font-size: 0.8em;
 }
 
 @media(min-width:320px) {
@@ -146,19 +196,45 @@ i:hover {
     .profile p {
         width: 80%;
         font-size: 1.1em;
+        margin-bottom: 8px;
     }
 
     .show-roles {
-        padding-top: 25px;
+        padding-top: 30px;
     }
 
     .show-roles > img {
-        width: 80%;
-        margin: 20px auto;
+        width: 85%;
+        height: 190px;
+        margin: 25px auto;
+    }
+
+    .tools-skills {
+        width: 85%;
+    }
+
+    .work-experience {
+        flex-flow: column;
+        align-items: center;
+        padding: 20px 0 35px 0;
+    }
+
+    .experience {
+        width: 85%;
+        max-height: 525px;
+    }
+    
+    .experience > img {
+        height: 210px;
+    }
+
+    .experience > p {
+        padding: 10px 10px 0 10px ;
+        font-size: 0.9em;
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:500px) {
     .profile {
         margin-top: 55px;
         background-repeat: repeat-x;
@@ -174,12 +250,37 @@ i:hover {
     }
 
     .show-roles {
-        padding-top: 10px;
+        padding-top: 45px;
     }
 
     .show-roles > img {
         width: 50%;
-        margin: 30px auto;
+        margin: 45px auto;
+        max-height: 200px;
+    }
+
+    .tools-skills {
+        width: 60%;
+    }
+
+    .work-experience {
+        flex-flow: row;
+        align-items: baseline;
+        padding: 10px 0 25px 0;
+    }
+
+    .experience {
+        width: 31%;
+        height: 500px;
+    }
+    
+    .experience > img {
+        height: 230px;
+    }
+
+    .experience > p {
+        padding: 10px;
+        font-size: 0.8em;
     }
 }
 
@@ -191,5 +292,33 @@ i:hover {
     .profile p {
         width: 55%;
         font-size: 1.5em;
+    }
+
+    .show-roles {
+        padding-top: 38px;
+    }
+
+    .show-roles > img {
+        margin-top: 65px;
+        height: 210px;
+    }
+
+    .work-experience {
+        flex-flow: row;
+        align-items: baseline;
+        padding: 30px 0 20px 0;
+    }
+
+    .experience {
+        width: 28%;
+        height: 465px;
+    }
+    
+    .experience > img {
+        height: 250px;
+    }
+
+    .experience > p {
+        padding: 15px;
     }
 }

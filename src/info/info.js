@@ -28,10 +28,9 @@ const jobs = [
         img: "https://i.ibb.co/8MhgqKc/raw.png",
         title: "Software development",
         description: `
-            I've been involved in coding for a few years, since teaching Arduino and being 
+            Since teaching Arduino and being 
             a team coach for robotics competitions to work developing a web application to
-            record and analize biosignals and also do research on automatic smell recognition
-            using machine learning and signal processing. 
+            record and analize biosignals. 
         `,
         period: "2019 - Currently",
     },
@@ -47,9 +46,7 @@ const jobs = [
         img: "https://i.ibb.co/YjsqYq2/teaching.jpg",
         title: "Teaching",
         description: `
-            I've been involved in coding for a few years, since teaching Arduino and being 
-            a team coach for robotics competitions to work developing a web application to
-            record and analize biosignals and also do some research on automatic smell recognition
+            Also do some research on automatic smell recognition
             using machine learning and signal processing. 
         `,
         period: "2015 - 2018",

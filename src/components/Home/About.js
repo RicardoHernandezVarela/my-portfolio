@@ -68,8 +68,13 @@ class About extends Component {
                 </div>
 
                 <div className="my-tools">
-                    <h3>Tools</h3>
+                    <h2>My tools</h2>
                     <Skills skills={toolsSkills}/>
+                </div>
+
+                <div className="working-on">
+                    <h2>What I´ve been working on</h2>
+                    <WorkExperience jobs={jobs} />
                 </div>
             </Fragment>
         )
@@ -91,6 +96,26 @@ const Skills = (props) => {
             })}
         </div>
     )
+};
+
+const WorkExperience = (props) => {
+    const jobs = props.jobs;
+    return (
+        <div className="work-experience">
+
+            {jobs.map((job, index) => {
+                return (
+                    <div className="experience" key={index}>
+                        <img src={job.img} alt="rick" />
+                        <span className="job-title">{job.title}</span>
+                        <p>{job.description}</p>
+                        <span className="experience-period">{job.period}</span> 
+                    </div>
+                );
+            })
+            }
+        </div>
+    );
 };
 
 export default About;

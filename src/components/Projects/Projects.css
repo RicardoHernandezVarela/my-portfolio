@@ -6,6 +6,7 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    background-color: #114B5F;
 }
 
 .project {
@@ -22,8 +23,8 @@
     'list list list'
     'visit visit visit';
 
-    background-color: #404040;
-    color: #fff;
+    background-color: #252525;
+    color: #F5F5F5;
     border-radius: 10px;
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
 }
