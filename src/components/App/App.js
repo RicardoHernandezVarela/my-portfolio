@@ -11,7 +11,6 @@ import * as ROUTES from '../../constants/routes';
 
 /* Import components */
 import Navigation from '../Navigation/Navigation';
-import Home from '../Home/Home';
 import About from '../Home/About';
 import Projects from '../Projects/Projects';
 import Teaching from '../Teaching/Teaching';

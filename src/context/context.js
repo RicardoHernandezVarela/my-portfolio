@@ -7,8 +7,25 @@ export class Provider extends Component {
         super(props);
 
         this.state = {
-            showNavBar: false,
+            involved: [],
+            toolsSkills: [], 
+            experience: []
         }
+    }
+
+    handleGetData() {
+        fetch(`https://my-json-server.typicode.com/RicardoHernandezVarela/portfolio-data/db`)
+          .then(response => response.json())
+          .then(responseData => {
+            this.setState({
+                involved: responseData.involved,
+                toolsSkills: responseData.toolsSkills,
+                experience: responseData.experience
+            });
+          })
+          .catch(error => {
+            console.log('Error fetching and parsing data', error);
+          });
     }
 
     handleShowNavBar = (event) => {
@@ -16,6 +33,7 @@ export class Provider extends Component {
     }
 
     componentDidMount() {
+        this.handleGetData();
     }
 
     render(){

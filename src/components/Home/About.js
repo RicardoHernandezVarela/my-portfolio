@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 
+/* Import Context Consumer */
+import { Consumer } from '../../context/context';
+
 /* Import CSS */
 import './About.css';
-
-import { jobs, toolsSkills } from '../../info/info';
 
 class About extends Component {
     constructor() {
@@ -11,7 +12,7 @@ class About extends Component {
 
         this.state = {
             currentIndex: 0,
-            jobsSize: jobs.length
+            jobsSize: 4
         };
     }
 
@@ -36,47 +37,62 @@ class About extends Component {
     }
 
     render() {
-        const currentJob = jobs[this.state.currentIndex];
-
+        
         return (
-            <Fragment>
-                <div className="profile">
-                    <h4>
-                        Hi <span role="img" aria-label="hand">👋</span> 
-                        I´m Ricardo!!
-                    </h4>
-                    <hr></hr>
-                    <p>
-                        I´m a frontend web development student 
-                        loving my learning adventure with React. 
-                    </p>
-                    <p>I´ve been involved in coding for a few years.</p> 
+            <Consumer>
+                {context => {
+                    const { involved, toolsSkills, experience } = context;
+                    const currentJob = involved[this.state.currentIndex];
 
-                    <div className="show-roles">
-                        <div>
-                            <i className="material-icons roles-left" onClick={this.prevImage}>
-                                keyboard_arrow_left
-                            </i>
-                            <span className="roles-name">{currentJob.title}</span>
-                            <i className="material-icons roles-right" onClick={this.nextImage}>
-                                keyboard_arrow_right
-                            </i>
-                        </div>
+                    return (
+                        <Fragment>
+                            <div className="profile">
+                                <h4>
+                                    Hi <span role="img" aria-label="hand">👋</span> 
+                                    I´m Ricardo!!
+                                </h4>
+                                <hr></hr>
+                                <p>
+                                    I´m a frontend web development student 
+                                    loving my learning adventure with React. 
+                                </p>
+                                <p>I´ve been involved in coding for a few years.</p> 
+            
+                                {(currentJob !== undefined) &&
+                                    <div className="show-roles">
+                                        <div>
+                                            <i className="material-icons roles-left" onClick={this.prevImage}>
+                                                keyboard_arrow_left
+                                            </i>
+                                            <span className="roles-name">{currentJob.title}</span>
+                                            <i className="material-icons roles-right" onClick={this.nextImage}>
+                                                keyboard_arrow_right
+                                            </i>
+                                        </div>
+                
+                                        <img src={currentJob.img} alt=""/>
+                                    </div>
+                                }
 
-                        <img src={currentJob.img} alt=""/>
-                    </div>
-                </div>
-
-                <div className="my-tools">
-                    <h2>My tools</h2>
-                    <Skills skills={toolsSkills}/>
-                </div>
-
-                <div className="working-on">
-                    <h2>What I´ve been working on</h2>
-                    <WorkExperience jobs={jobs} />
-                </div>
-            </Fragment>
+                            </div>
+            
+                            <div className="my-tools">
+                                <h2>Tools I´m using for my projects</h2>
+                                {(toolsSkills !== undefined) &&
+                                    <Skills skills={toolsSkills}/>
+                                }
+                            </div>
+            
+                            <div className="working-on">
+                                <h2>What I´ve been working on</h2>
+                                {(experience !== undefined) && 
+                                    <WorkExperience jobs={experience} />
+                                }
+                            </div>
+                        </Fragment>
+                    )
+                }}
+            </Consumer>
         )
     }
 }
