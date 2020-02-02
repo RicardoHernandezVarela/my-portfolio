@@ -1,15 +1,25 @@
 .projects {
     margin: 0 auto;
-    margin-top: 55px;
-    padding-top: 50px;
+    margin-top: 10px;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
 }
 
+.projects-header {
+    text-align: center;
+    padding-top: 55px;
+    font-weight: 500;
+}
+
+.projects-hr {
+    margin-top: -20px;
+    border: 1px solid #707070;
+}
+
 .project {
     width: 280px;
-    height: 360px;
+    height: 420px;
     margin: 15px 15px;
     
     display: grid;
@@ -19,9 +29,10 @@
     'name name name'
     'desc desc desc'
     'list list list'
+    'list list list'
     'visit visit visit';
 
-    background-color: #252525;
+    background-color: #404040;
     color: #F5F5F5;
     border-radius: 10px;
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
@@ -30,6 +41,7 @@
 .project > span {
     grid-area: name;
     text-align: center;
+    padding: 5px;
 }
 
 .project > img {
@@ -42,8 +54,8 @@
 
 .project > p {
     grid-area: desc;
-    text-align: justify;
-    font-size: 0.65em;
+    text-align: center;
+    font-size: 0.75em;
     padding: 2px 20px 0 20px;
     margin: 2px auto;
 }
@@ -52,25 +64,40 @@
     grid-area: list;
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto;
-    padding: 0;
+    padding: 8px 20px 5px 20px;
 }
 
 .project > ul > li{
-    padding: 2px;
+    padding: 0 5px;
     list-style: none;
-    font-size: 0.6em;
+    font-size: 0.68em;
 }
 
 .project > div {
     grid-area: visit;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 .project > div a {
     padding: 2px 8px 15px 8px;
     color: #fff;
     font-size: 0.6em;
+}
+
+.projects-footer {
+    text-align: center;
+    margin: 5px auto;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.my-github {
+    margin-top: 2px;
+    margin-bottom: 20px;
 }
 
 /*****************************************************
@@ -103,12 +130,30 @@
 ****************************************************/
 @media(min-width:320px) {
     .projects {
-        margin-top: 40px;
+        margin-top: 25px;
+    }
+
+    .projects-header, 
+    .projects-footer {
+        font-size: 1.5em;
+    }
+
+    .projects-hr {
+        width: 85%;
     }
 }
 
 @media(min-width:768px) {
     .projects {
-        margin-top: 55px;
+        margin-top: 25px;
+    }
+
+    .projects-header, 
+    .projects-footer {
+        font-size: 1.6em;
+    }
+
+    .projects-hr {
+        width: 35%;
     }
 }
