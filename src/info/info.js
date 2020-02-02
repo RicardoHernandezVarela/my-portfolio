@@ -57,15 +57,15 @@ const jobs = [
 const logos = [
     {
         url: "https://github.com/RicardoHernandezVarela",
-        img: "https://i.ibb.co/Z6PXMvQ/github160px.png",
+        img: "https://i.ibb.co/nnJCbyC/github60px.png",
     },
     {
         url: "https://twitter.com/RVarela0111",
-        img: "https://i.ibb.co/z83MZSf/twitter200px.jpg",
+        img: "https://i.ibb.co/PQ1Pc9Z/twitter60px.png",
     },
     {
         url: "https://www.linkedin.com/in/ricardo-varela-015a99199/",
-        img: "https://i.ibb.co/KjSM9P8/Linked-In160px.png",
+        img: "https://i.ibb.co/x5jX4mj/Linked-In60px.png",
     },
 ];
 
