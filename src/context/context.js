@@ -9,7 +9,8 @@ export class Provider extends Component {
         this.state = {
             involved: [],
             toolsSkills: [], 
-            experience: []
+            experience: [], 
+            contact: []
         }
     }
 
@@ -20,7 +21,8 @@ export class Provider extends Component {
             this.setState({
                 involved: responseData.involved,
                 toolsSkills: responseData.toolsSkills,
-                experience: responseData.experience
+                experience: responseData.experience,
+                contact: responseData.contact
             });
           })
           .catch(error => {

@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
+/* Import Context Consumer */
+import { Consumer } from '../../context/context';
+
 /* Importar CSS */
 import './Navigation.css';
 
@@ -46,44 +49,50 @@ class Navigation extends Component {
 
     render() {
         return (
-            <Fragment>
-                <span className="menu" onClick={this.handleShowNavbar}>
-                    <i className="material-icons">menu</i>
-                </span>
+            <Consumer>
+                {context => {
+                    const { contact } = context;
 
-                <div className={this.state.navClass}>
-                    <img className="sidenav-img" src={profileImg} alt="profile"/>
-                    <h3>Ricardo Varela</h3>
-                    <h5>Front-end developer</h5>
-                    <ul className="navegacion">
-                        <li>
-                            <NavLink exact to={ROUTES.HOME}>About me</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={ROUTES.PROJECTS}>Projects</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={ROUTES.LEARNING}>Learning</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={ROUTES.TEACHING}>Teaching</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={ROUTES.CONTACT}>Contact</NavLink>
-                        </li>
-                    </ul>
+                    return (
+                        <Fragment>
+                            <span className="menu" onClick={this.handleShowNavbar}>
+                                <i className="material-icons">menu</i>
+                            </span>
 
-                    <h5>Get in touch</h5>
-                    <h5>Let's build something !!</h5>
-                    <MultipleLogos logos={logos} />
-                </div>
-            </Fragment>
+                            <div className={this.state.navClass}>
+                                <img className="sidenav-img" src={profileImg} alt="profile"/>
+                                <h3>Ricardo Varela</h3>
+                                <h5>Front-end developer</h5>
+                                <ul className="navegacion">
+                                    <li>
+                                        <NavLink exact to={ROUTES.HOME}>About me</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to={ROUTES.PROJECTS}>Projects</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to={ROUTES.TEACHING}>Teaching</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to={ROUTES.CONTACT}>Contact</NavLink>
+                                    </li>
+                                </ul>
 
+                                <h5>Get in touch</h5>
+                                <h5>Let's build something !!</h5>
+                                {(contact !== undefined) && 
+                                    <ContactLogos logos={contact} />
+                                }
+                            </div>
+                        </Fragment>
+                    )
+                }}
+            </Consumer>
         );
     }
 }
 
-const MultipleLogos = (props) => {
+const ContactLogos = (props) => {
     const logos = props.logos;
     return (
         <div className="contact-options">
