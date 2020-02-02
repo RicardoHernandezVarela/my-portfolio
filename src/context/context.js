@@ -10,7 +10,10 @@ export class Provider extends Component {
             involved: [],
             toolsSkills: [], 
             experience: [], 
-            contact: []
+            contact: [], 
+            projectsList: [],
+            loading: true,
+            error: null
         }
     }
 
@@ -22,10 +25,13 @@ export class Provider extends Component {
                 involved: responseData.involved,
                 toolsSkills: responseData.toolsSkills,
                 experience: responseData.experience,
-                contact: responseData.contact
+                contact: responseData.contact, 
+                projectsList: responseData.projectsList,
+                loading: false
             });
           })
           .catch(error => {
+              this.setState({error: error});
             console.log('Error fetching and parsing data', error);
           });
     }

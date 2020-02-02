@@ -1,14 +1,38 @@
 import React from 'react';
 
+/* Import Context Consumer */
+import { Consumer } from '../../context/context';
+
+/* Import Loader */
+import Loader from '../Loader/Loader';
+
 /* Import CSS */
 import './Projects.css';
 
-/* Import projects */
-import { projectsList } from '../../info/projects';
-
 const Projects = () => {
     return (
-        
+        <Consumer>
+            {context => {
+                const { projectsList, loading } = context;
+                
+                if(loading) {
+                    return (
+                        <Loader />
+                    )
+                }
+
+                return (
+                    <ProjectsList projectsList={projectsList}/>
+                )
+            }}
+        </Consumer>
+    );
+}
+
+const ProjectsList = (props) => {
+    const projectsList = props.projectsList;
+
+    return (
         <div className="projects">
             {projectsList.map((project, index) => {
                 return (
@@ -30,7 +54,7 @@ const Projects = () => {
             })
             }
         </div>
-    );
+    )
 }
 
 const StackList = (props) => {

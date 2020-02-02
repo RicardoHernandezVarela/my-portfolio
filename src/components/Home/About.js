@@ -3,6 +3,9 @@ import React, { Component, Fragment } from 'react';
 /* Import Context Consumer */
 import { Consumer } from '../../context/context';
 
+/* Import Loader */
+import Loader from '../Loader/Loader';
+
 /* Import CSS */
 import './About.css';
 
@@ -41,8 +44,14 @@ class About extends Component {
         return (
             <Consumer>
                 {context => {
-                    const { involved, toolsSkills, experience } = context;
+                    const { involved, toolsSkills, experience, loading } = context;
                     const currentJob = involved[this.state.currentIndex];
+                    
+                    if (loading) {
+                        return (
+                            <Loader />
+                        )
+                    }
 
                     return (
                         <Fragment>
@@ -57,37 +66,30 @@ class About extends Component {
                                     loving my learning adventure with React. 
                                 </p>
                                 <p>I´ve been involved in coding for a few years.</p> 
-            
-                                {(currentJob !== undefined) &&
-                                    <div className="show-roles">
-                                        <div>
-                                            <i className="material-icons roles-left" onClick={this.prevImage}>
-                                                keyboard_arrow_left
-                                            </i>
-                                            <span className="roles-name">{currentJob.title}</span>
-                                            <i className="material-icons roles-right" onClick={this.nextImage}>
-                                                keyboard_arrow_right
-                                            </i>
-                                        </div>
-                
-                                        <img src={currentJob.img} alt=""/>
+                                <div className="show-roles">
+                                    <div>
+                                        <i className="material-icons roles-left" onClick={this.prevImage}>
+                                            keyboard_arrow_left
+                                        </i>
+                                        <span className="roles-name">{currentJob.title}</span>
+                                        <i className="material-icons roles-right" onClick={this.nextImage}>
+                                            keyboard_arrow_right
+                                        </i>
                                     </div>
-                                }
+            
+                                    <img src={currentJob.img} alt=""/>
+                                </div>
 
                             </div>
             
                             <div className="my-tools">
                                 <h2>Tools I´m using for my projects</h2>
-                                {(toolsSkills !== undefined) &&
-                                    <Skills skills={toolsSkills}/>
-                                }
+                                <Skills skills={toolsSkills}/>
                             </div>
             
                             <div className="working-on">
                                 <h2>What I´ve been working on</h2>
-                                {(experience !== undefined) && 
-                                    <WorkExperience jobs={experience} />
-                                }
+                                <WorkExperience jobs={experience} />
                             </div>
                         </Fragment>
                     )
