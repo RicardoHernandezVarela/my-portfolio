@@ -14,6 +14,7 @@ import Navigation from '../Navigation/Navigation';
 import About from '../Home/About';
 import Projects from '../Projects/Projects';
 import Teaching from '../Teaching/Teaching';
+import Contact from '../Contact/Contact';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
                   <Route exact path={ROUTES.HOME} component={About} />
                   <Route exact path={ROUTES.PROJECTS} component={Projects} />
                   <Route exact path={ROUTES.TEACHING} component={Teaching} />
+                  <Route exact path={ROUTES.CONTACT} component={Contact} />
                 </Switch>
             </div>
         </Router>

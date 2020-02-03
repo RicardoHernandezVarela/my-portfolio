@@ -1,0 +1,54 @@
+.contact {
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.contact > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.contact > p {
+    margin: 10px auto;
+    text-align: center;
+    width: 80%;
+    padding: 0.5em;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+@media(min-width:320px) {
+    .contact {
+        margin-top: 40px;
+    }
+
+    .contact > img {
+        width: 150px;
+        height: 150px;
+        margin: 20px auto;
+    }
+
+    .contact > p {
+        width: 90%;
+        font-size: 0.85em;
+    }
+}
+
+@media(min-width:768px) {
+    .contact {
+        margin-top: 55px;
+    }
+
+    .contact > img {
+        width: 220px;
+        height: 220px;
+        margin: 25px auto;
+    }
+
+    .contact > p {
+        width: 60%;
+        font-size: 1em;
+    }
+}
