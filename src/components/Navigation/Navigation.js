@@ -13,9 +13,6 @@ import * as ROUTES from '../../constants/routes';
 /* Import profile image */
 import profileImg from '../../img/flower.jpg';
 
-/* Profile info Bring from context then */
-import { logos } from '../../info/info';
-
 class Navigation extends Component {
     constructor(props) {
         super(props);

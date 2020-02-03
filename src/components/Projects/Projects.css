@@ -10,6 +10,7 @@
     text-align: center;
     padding-top: 55px;
     font-weight: 500;
+    
 }
 
 .projects-hr {
@@ -146,6 +147,10 @@
 @media(min-width:768px) {
     .projects {
         margin-top: 25px;
+    }
+
+    .projects-header {
+        margin-top: 55px;
     }
 
     .projects-header, 
