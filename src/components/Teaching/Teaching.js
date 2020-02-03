@@ -8,9 +8,7 @@ import Loader from '../Loader/Loader';
 
 /* Import CSS */
 import './Teaching.css';
-
-/* Profile info */
-import { teachingResources } from '../../info/projects';
+import Error from '../Error/Error';
 
 class Teaching extends Component {
     constructor() {
@@ -31,7 +29,13 @@ class Teaching extends Component {
         return (
             <Consumer>
                 {context => {
-                    const { tutorials, resources, notes, loading } = context;
+                    const { tutorials, resources, notes, loading, error } = context;
+                    
+                    if (error) {
+                        return (
+                            <Error error={error}/>
+                        )
+                    }
 
                     if (loading) {
                         return (
@@ -43,7 +47,7 @@ class Teaching extends Component {
                         <div className="teaching">
                             <h4>
                                 <span role="img" aria-label="maletin">📚 </span> 
-                                Here I share resources of courses I´ve taught and also tutorials.
+                                Here I share resources of courses I teach and also tutorials.
                             </h4>
                             <hr></hr>
                             <div className="content">

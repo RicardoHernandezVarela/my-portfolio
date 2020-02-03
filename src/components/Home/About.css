@@ -147,12 +147,17 @@ i:hover {
 }
 
 .experience {
-    display: flex;
-    flex-flow: column;
     border-radius: 10px;
     font-weight: 200;
     color: #F5F5F5;
     background-color: #404040;
+    display: grid;
+    grid-template-areas: 
+    'img'
+    'job'
+    'description'
+    'period'
+    'period';
     box-shadow: 1px 1px 8px 2px rgba(0,0,0,0.3);
 }
 
@@ -161,16 +166,19 @@ i:hover {
 }
 
 .experience > img {
+    grid-area: img;
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
 .experience > span {
+    grid-area: job;
     text-align: center;
     padding: 7px 0;
 }
 
 .experience > p {
+    grid-area: description;
     text-align: justify;
     margin: 0 auto;
     font-size: 0.9em;
@@ -178,8 +186,28 @@ i:hover {
 }
 
 .experience-period {
+    grid-area: period;
+    display: block;
     margin: 5px auto;
+    padding: 10px;
     font-size: 0.8em;
+    font-weight: 200;
+}
+
+.resume {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.resume > h2 {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.resume > div > a {
+    padding: 5px;
+    font-weight: 600;
 }
 
 @media(min-width:320px) {
@@ -219,7 +247,11 @@ i:hover {
     .work-experience {
         flex-flow: column;
         align-items: center;
-        padding: 20px 0 35px 0;
+        padding: 20px 0 15px 0;
+    }
+
+    .work-experience > div {
+        margin: 20px auto;
     }
 
     .experience {
@@ -232,7 +264,7 @@ i:hover {
     }
 
     .experience > p {
-        padding: 10px 10px 0 10px ;
+        padding: 10px 20px 0 20px;
         font-size: 0.9em;
     }
 }
@@ -273,7 +305,11 @@ i:hover {
     .work-experience {
         flex-flow: column;
         align-items: baseline;
-        padding: 10px 0 25px 0;
+        padding: 10px 0 10px 0;
+    }
+
+    .work-experience > div {
+        margin: 10px auto;
     }
 
     .experience {
@@ -288,6 +324,13 @@ i:hover {
     .experience > p {
         padding: 10px;
         font-size: 0.8em;
+    }
+}
+
+@media(min-width:800px) {
+    .experience {
+        width: 50%;
+        height: 450px;
     }
 }
 
@@ -319,7 +362,7 @@ i:hover {
 
     .experience {
         width: 29%;
-        height: 520px;
+        height: 530px;
     }
     
     .experience > img {
@@ -327,6 +370,6 @@ i:hover {
     }
 
     .experience > p {
-        padding: 15px;
+        padding: 10px 15px;
     }
 }

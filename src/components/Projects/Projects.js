@@ -5,6 +5,7 @@ import { Consumer } from '../../context/context';
 
 /* Import Loader */
 import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 
 /* Import CSS */
 import './Projects.css';
@@ -13,8 +14,14 @@ const Projects = () => {
     return (
         <Consumer>
             {context => {
-                const { projectsList, loading, contact } = context;
+                const { projectsList, loading, contact, error } = context;
                 const logo = contact[0];
+
+                if (error) {
+                    return (
+                        <Error error={error}/>
+                    )
+                }
 
                 if(loading) {
                     return (

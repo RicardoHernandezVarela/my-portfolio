@@ -5,6 +5,7 @@ import { Consumer } from '../../context/context';
 
 /* Import Loader */
 import Loader from '../Loader/Loader';
+import Error from '../Error/Error';
 
 /* Import CSS */
 import './About.css';
@@ -44,9 +45,15 @@ class About extends Component {
         return (
             <Consumer>
                 {context => {
-                    const { involved, toolsSkills, experience, loading } = context;
+                    const { involved, toolsSkills, experience, loading, error } = context;
                     const currentJob = involved[this.state.currentIndex];
                     
+                    if (error) {
+                        return (
+                            <Error error={error}/>
+                        )
+                    }
+
                     if (loading) {
                         return (
                             <Loader />
@@ -91,6 +98,14 @@ class About extends Component {
                                 <h2>What I've been working on</h2>
                                 <WorkExperience jobs={experience} />
                             </div>
+
+                            <section className="resume">
+                                <h2>Download my resume</h2>
+                                <div>
+                                    <a href="https://drive.google.com/open?id=1ZwfCnhXd-ciOBIHOB7r9Lr2I4CKW75c7">English</a>
+                                    <a href="https://drive.google.com/open?id=1ZwfCnhXd-ciOBIHOB7r9Lr2I4CKW75c7">Spanish</a>
+                                </div>
+                            </section>
                         </Fragment>
                     )
                 }}
@@ -127,7 +142,7 @@ const WorkExperience = (props) => {
                         <img src={job.img} alt="rick" />
                         <span className="job-title">{job.title}</span>
                         <p>{job.description}</p>
-                        <span className="experience-period">{job.period}</span> 
+                        <h6 className="experience-period">{job.period}</h6> 
                     </div>
                 );
             })
