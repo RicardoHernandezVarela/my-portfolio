@@ -1,30 +1,41 @@
 .teaching {
-    width: 100%;
-    padding-top: 80px;
-    align-items: center;
+    display: block;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.teaching > h4 {
+    text-align: center;
+    padding-top: 5px;
+    font-weight: 500;
+    
+}
+
+.teaching > hr {
+    margin-top: -15px;
+    margin-bottom: 40px;
+    border: 1px solid #707070;
 }
 
 .content {
     display: block;
-    margin: 15px auto;
-    margin-bottom: 40px;
+    margin: 30px auto;
     border-radius: 10px;
     
     display: grid;
-    gap: 10px;
-    grid-template-areas:
-    'active type type type type'
-    'show show show show show';
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    grid-template-rows: 35px auto;
 }
 
 .active-show {
-    grid-area: active;
+    grid-column: 1/2;
+    grid-row: 1/2;
     text-align: center;
-    border-radius: 50px;
-    padding-top: 3px;
+    border-radius: 20px;
+    padding-top: 5px;
     background-color: #404040;
-    color: #fff;
-    box-shadow: 1px 2px 2px 2px rgba(0,0,0,0.2);
+    color: #F5F5F5;
+    box-shadow: -1px 1px 4px 3px rgba(0,0,0,0.2);
 }
 
 .active-show:hover {
@@ -32,41 +43,43 @@
 }
 
 .type {
-    grid-area: type;
-    border-radius: 0px 10px;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    border-radius: 20px;
     margin-left: 15px;
-    padding-top: 5px;
+    padding-top: 7px;
     text-align: center;
-    background-color: #f5f5f5;
-    box-shadow: 5px 5px 6px 2px rgba(0,0,0,0.2);
+    font-weight: 600;
+    background-color: #114B5F;
+    color: #F9F9F9;
+    box-shadow: -1px 1px 4px 3px rgba(0,0,0,0.2);
 }
 
 .show {
-    grid-area: show;
+    grid-column: 1/-1;
+    grid-row: 2/-1;
     display: flex;
     flex-flow: column;
-    margin: 0;
+    margin: 10px auto;
     padding: 0;
     list-style: none;
 }
 
 .show > li {
-    margin: 10px auto;
-    border-radius: 10px 10px 0 10px;
-
-    background-color: #fff;
+    margin: 15px auto;
+    border-radius: 10px;
+    background-color: #F5F5F5;
     display: grid;
 
-    grid-template-areas:
-    'title title title topic topic'
-    'desc desc desc link link'
-    'desc desc desc link link';
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    grid-template-rows: auto auto 35px;
     box-shadow: 1px 1px 2px 3px rgba(0,0,0,0.2);
     text-align: center;
 }
 
 .show > li > h5 {
-   grid-area: title; 
+   grid-column: 1/4;
+   grid-row: 1/2;
    margin: 0;
    padding: 5px;
    border-radius: 10px 0 0 0;
@@ -77,7 +90,8 @@
 }
 
 .show > li > span {
-   grid-area: topic;
+   grid-column: 4/-1;
+   grid-row: 1/2;
    margin-top: 0px;
    padding: 11px;
    font-size: 0.7em;
@@ -88,7 +102,9 @@
 }
 
 .show > li > p {
-   grid-area: desc; 
+   grid-column: 1/-1;
+   grid-row: 2/3;
+   display: flex;
    margin: 0 auto;
    padding: 0.8em;
    font-size: 0.75em;
@@ -97,10 +113,11 @@
 }
 
 .show > li > a {
-   grid-area: link;
-   margin: 10px auto;
+   grid-column: 1/-1;
+   grid-row: 3/-1;
+   margin: 3px auto;
    text-decoration: underline; 
-   padding: 6px;
+   padding: 5px;
    font-size: 0.7em;
    font-weight: 600;
    color: #252525;
@@ -114,8 +131,8 @@
  Animations
 ***************************************************/
 .fadeIn {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
     -webkit-animation-name: fadeIn;
@@ -139,8 +156,17 @@
         margin-top: 40px;
     }
 
+    .teaching > h4 {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .teaching > hr {
+        width: 90%;
+    }
+
     .content {
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -149,7 +175,19 @@
         margin-top: 55px;
     }
 
+    .teaching > h4 {
+        font-size: 1.4em;
+    }
+
+    .teaching > hr {
+        width: 63%;
+    }
+
     .content {
         width: 60%;
+    }
+
+    .show > li {
+        width: 400px;
     }
 }

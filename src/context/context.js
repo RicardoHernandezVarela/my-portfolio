@@ -12,24 +12,32 @@ export class Provider extends Component {
             experience: [], 
             contact: [], 
             projectsList: [],
+            tutorials: [],
+            resources: [],
+            notes: [],
             loading: true,
             error: null
         }
+    }
+
+    getTeachingResources = () => {
+        fetch(`https://my-json-server.typicode.com/RicardoHernandezVarela/teaching-resources/db`)
+            .then(response => response.json())
+            .then(responseData => {
+                this.setState({
+                    ...responseData,
+                    loading: false
+                });
+            })
     }
 
     handleGetData() {
         fetch(`https://my-json-server.typicode.com/RicardoHernandezVarela/portfolio-data/db`)
           .then(response => response.json())
           .then(responseData => {
-            this.setState({
-                involved: responseData.involved,
-                toolsSkills: responseData.toolsSkills,
-                experience: responseData.experience,
-                contact: responseData.contact, 
-                projectsList: responseData.projectsList,
-                loading: false
-            });
+            this.setState({...responseData})
           })
+          .then(() => this.getTeachingResources())
           .catch(error => {
               this.setState({error: error});
             console.log('Error fetching and parsing data', error);

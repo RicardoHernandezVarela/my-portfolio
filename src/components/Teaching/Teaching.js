@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+/* Import Consumer Context */
+import { Consumer } from '../../context/context';
+
+/* Import Loader */
+import Loader from '../Loader/Loader';
+
 /* Import CSS */
 import './Teaching.css';
 
@@ -18,35 +24,53 @@ class Teaching extends Component {
     }
 
     handleClick = (elements) => {
-        console.log(this.state[elements]);
         this.setState({[elements]: !this.state[elements]})
     }
 
     render() {
         return (
-            <div className="teaching">
-                <div className="content">
-                    <span className="active-show" onClick={() => this.handleClick('tutorials')}>
-                        <i className="material-icons">code</i>
-                    </span>
-                    <span className="type">TUTORIALS</span>
-                    <RenderList items={teachingResources.tutorials} element={this.state.tutorials} />
-                </div>
-                <div className="content">
-                    <span className="active-show" onClick={() => this.handleClick('resources')}>
-                        <i className="material-icons">code</i>
-                    </span>
-                    <span className="type">RESOURCES</span>
-                    <RenderList items={teachingResources.resources} element={this.state.resources} />
-                </div>
-                <div className="content">
-                    <span className="active-show" onClick={() => this.handleClick('notes')}>
-                        <i className="material-icons">code</i>
-                    </span>
-                    <span className="type">CLASS NOTES</span>
-                    <RenderList items={teachingResources.notes} element={this.state.notes} />
-                </div>
-            </div>
+            <Consumer>
+                {context => {
+                    const { tutorials, resources, notes, loading } = context;
+
+                    if (loading) {
+                        return (
+                            <Loader />
+                        )
+                    }
+
+                    return (
+                        <div className="teaching">
+                            <h4>
+                                <span role="img" aria-label="maletin">📚 </span> 
+                                Here I share resources of courses I´ve taught and also tutorials.
+                            </h4>
+                            <hr></hr>
+                            <div className="content">
+                                <span className="active-show" onClick={() => this.handleClick('tutorials')}>
+                                    <i className="material-icons">code</i>
+                                </span>
+                                <span className="type">TUTORIALS</span>
+                                <RenderList items={tutorials} element={this.state.tutorials} />
+                            </div>
+                            <div className="content">
+                                <span className="active-show" onClick={() => this.handleClick('resources')}>
+                                    <i className="material-icons">code</i>
+                                </span>
+                                <span className="type">RESOURCES</span>
+                                <RenderList items={resources} element={this.state.resources} />
+                            </div>
+                            <div className="content">
+                                <span className="active-show" onClick={() => this.handleClick('notes')}>
+                                    <i className="material-icons">code</i>
+                                </span>
+                                <span className="type">CLASS NOTES</span>
+                                <RenderList items={notes} element={this.state.notes} />
+                            </div>
+                        </div>
+                    )
+                }}
+            </Consumer>
         );
     }
 }
