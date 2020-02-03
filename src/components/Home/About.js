@@ -58,14 +58,14 @@ class About extends Component {
                             <div className="profile">
                                 <h4>
                                     Hi <span role="img" aria-label="hand">👋</span> 
-                                    I´m Ricardo!!
+                                    I'm Ricardo!!
                                 </h4>
                                 <hr></hr>
                                 <p>
-                                    I´m a frontend web development student 
+                                    I'm a front-end web development student 
                                     loving my learning adventure with React. 
                                 </p>
-                                <p>I´ve been involved in coding for a few years.</p> 
+                                <p>I've been involved in coding for a few years.</p> 
                                 <div className="show-roles">
                                     <div>
                                         <i className="material-icons roles-left" onClick={this.prevImage}>
@@ -83,12 +83,12 @@ class About extends Component {
                             </div>
             
                             <div className="my-tools">
-                                <h2>Tools I´m using for my projects</h2>
+                                <h2>Tools I'm using for my projects</h2>
                                 <Skills skills={toolsSkills}/>
                             </div>
             
                             <div className="working-on">
-                                <h2>What I´ve been working on</h2>
+                                <h2>What I've been working on</h2>
                                 <WorkExperience jobs={experience} />
                             </div>
                         </Fragment>
