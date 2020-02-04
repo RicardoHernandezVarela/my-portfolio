@@ -42,6 +42,7 @@ a {
 
 .navegacion > li > a {
     color: #e6e6e6;
+    padding: 0 30px;
 }
 
 .active {

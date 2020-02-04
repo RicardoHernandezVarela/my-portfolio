@@ -64,7 +64,7 @@ class About extends Component {
                         <Fragment>
                             <div className="profile">
                                 <h4>
-                                    Hi <span role="img" aria-label="hand">👋</span> 
+                                    Hi <span role="img" aria-label="hand">👋 </span> 
                                     I'm Ricardo!!
                                 </h4>
                                 <hr></hr>

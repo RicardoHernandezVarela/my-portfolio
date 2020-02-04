@@ -97,25 +97,25 @@ i:hover {
 }
 
 .skill-tech {
-    width: 120px;
-    height: 36px;
+    width: 125px;
+    height: 38px;
     margin: 0 auto;
     display: grid;
     gap: 1px;
     grid-template-areas:
     'img name'
     'img name';
-    background-color: #F2F2F2;
+    background-color: #FFF;
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
     border-radius: 25px;
 }
 
 .skill-tech > img {
     grid-area: img;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    margin: 3px 1px 1px 10px;
+    margin: 2px 1px 1px 10px;
 }
 
 .skill-tech > h4 {
@@ -227,7 +227,7 @@ i:hover {
     }
 
     .show-roles {
-        padding-top: 30px;
+        padding-top: 40px;
     }
 
     .roles-name {
@@ -294,8 +294,10 @@ i:hover {
 
     .show-roles > img {
         width: 65%;
-        margin: 45px auto;
-        max-height: 200px;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        max-height: 220px;
     }
 
     .tools-skills {
@@ -328,6 +330,10 @@ i:hover {
 }
 
 @media(min-width:800px) {
+    .show-roles > img {
+        margin-top: 90px;
+        max-height: 220px;
+    }
     .experience {
         width: 50%;
         height: 450px;
@@ -349,7 +355,7 @@ i:hover {
     }
 
     .show-roles > img {
-        margin-top: 65px;
+        margin-top: 70px;
         width: 40%;
         height: 230px;
     }
