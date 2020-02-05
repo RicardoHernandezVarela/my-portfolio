@@ -102,7 +102,7 @@ class About extends Component {
                             <section className="resume">
                                 <h2>Download my resume</h2>
                                 <div>
-                                    <a href="https://drive.google.com/open?id=1ZwfCnhXd-ciOBIHOB7r9Lr2I4CKW75c7">English</a>
+                                    <a href="https://drive.google.com/open?id=161Z-LeKQlhlxf2KIQxESxDGIpHDxFq-Z">English</a>
                                     <a href="https://drive.google.com/open?id=1ZwfCnhXd-ciOBIHOB7r9Lr2I4CKW75c7">Spanish</a>
                                 </div>
                             </section>
