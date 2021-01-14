@@ -223,11 +223,15 @@ i:hover {
     .profile p {
         width: 80%;
         font-size: 1.1em;
-        margin-bottom: 8px;
+        margin-bottom: 15px;
     }
 
     .show-roles {
-        padding-top: 40px;
+        padding-top: 60px;
+    }
+
+    .show-roles > div {
+        padding-bottom: 10px;
     }
 
     .roles-name {
@@ -236,7 +240,7 @@ i:hover {
 
     .show-roles > img {
         width: 85%;
-        height: 190px;
+        height: 220px;
         margin: 25px auto;
     }
 

@@ -60,7 +60,7 @@ class About extends Component {
                                     I'm a frontend developer, I´ve been developing projects using React and 
                                     React Native also I have experience working with Python and Django. 
                                 </p>
-                                <p>I've been involved in coding for a few years.</p> 
+                                <p>I've been coding and teaching to code for a few years.</p> 
                                 <div className="show-roles">
                                     <div>
                                         <i className="material-icons roles-left" onClick={() => this.handleChangeImage(involved.length)}>
@@ -78,7 +78,7 @@ class About extends Component {
                             </div>
             
                             <div className="my-tools">
-                                <h2>I have experience using this tools</h2>
+                                <h2>Tools I have experience with</h2>
                                 <Skills skills={toolsSkills}/>
                             </div>
             

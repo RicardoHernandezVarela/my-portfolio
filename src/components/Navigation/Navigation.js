@@ -24,11 +24,12 @@ class Navigation extends Component {
         this.actualPath = '/';
     }
 
-    handleShowNavbar = () =>  {
-        const navbarState = this.state.navClass;
-        navbarState === "sidenav nav-show" ?
-            this.setState({navClass: "sidenav nav-hide"}):
-            this.setState({navClass: "sidenav nav-show"});
+    componentDidMount() {
+        window.addEventListener('scroll', () => {
+            if (window.outerWidth < 768) {
+                this.setState({navClass: "sidenav nav-hide"});
+            }
+        });
     }
 
     componentDidUpdate() {
@@ -36,12 +37,20 @@ class Navigation extends Component {
         let actualPath = this.actualPath;
     
         if (actualPath !== newPath) {
+            // SCROLL TO TOP
+            window.scrollTo(0, 0);
+
             if (window.outerWidth < 768) {
                 this.setState({navClass: "sidenav nav-hide"});
             }
         }
 
         this.actualPath = newPath;
+    }
+
+    handleShowNavbar = () =>  {
+        const navbarState = this.state.navClass;
+        this.setState({navClass: navbarState === "sidenav nav-show" ? "sidenav nav-hide" : "sidenav nav-show"});
     }
 
     render() {
@@ -52,7 +61,7 @@ class Navigation extends Component {
 
                     return (
                         <Fragment>
-                            <span className="menu" onClick={this.handleShowNavbar}>
+                            <span className="menu" onClick={() => this.handleShowNavbar()}>
                                 <i className="material-icons">menu</i>
                             </span>
 
