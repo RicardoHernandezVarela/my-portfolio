@@ -36,11 +36,13 @@ export class Provider extends Component {
             .catch(() => {});
     }
 
-    handleGetData() {
-        fetch(`https://my-json-server.typicode.com/RicardoHernandezVarela/portfolio-data/db`)
-          .then(response => response.json())
-          .then(responseData => {
-            this.setState({...responseData})
+    // GET ALL SITE DATA FROM FIREBASE REALTIME DB.
+    handleGetData = () => {
+        this.firebase.getSiteData().once('value')
+          .then(snapshot => {
+            const responseData = snapshot.val();
+            console.log('FIREBASE RESPONSE: ', responseData);
+            this.setState({...responseData});
           })
           .then(() => this.getTeachingResources())
           .catch(error => {

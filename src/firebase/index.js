@@ -25,6 +25,9 @@ class Firebase {
 
     /* DataBase API */
 
+    /* Get site data */
+    getSiteData = () => this.db.ref('siteData');
+
     /* Get all teaching resources */
     getTeachingResources = () => this.db.ref('teachingResources');
 
