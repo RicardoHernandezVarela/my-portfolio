@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Firebase from '../firebase';
 
 const PortfolioContext = React.createContext();
 
@@ -18,17 +19,21 @@ export class Provider extends Component {
             loading: true,
             error: null
         }
+
+        this.firebase = new Firebase()
     }
 
+    // GET TEACHING RESOURCE FROM FIREBASE REALTIME DB.
     getTeachingResources = () => {
-        fetch(`https://my-json-server.typicode.com/RicardoHernandezVarela/teaching-resources/db`)
-            .then(response => response.json())
-            .then(responseData => {
+        this.firebase.getTeachingResources().once('value')
+            .then(snapshot => {
+                const responseData = snapshot.val();
                 this.setState({
                     ...responseData,
                     loading: false
                 });
             })
+            .catch(() => {});
     }
 
     handleGetData() {
