@@ -130,7 +130,7 @@ i:hover {
 /* MY WORK EXPERIENCE */
 .working-on {
     text-align: center;
-    margin: 20px auto;
+    margin: 40px auto;
     color: #252525;
 }
 
@@ -346,18 +346,19 @@ i:hover {
     }
 
     .profile p {
-        width: 55%;
+        width: 65%;
         font-size: 1.5em;
+        margin-bottom: 25px;
     }
 
     .show-roles {
-        padding-top: 38px;
+        padding-top: 20px;
     }
 
     .show-roles > img {
-        margin-top: 70px;
-        width: 40%;
-        height: 230px;
+        margin-top: 75px;
+        width: 45%;
+        height: 400px;
     }
 
     .work-experience {

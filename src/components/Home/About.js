@@ -16,29 +16,17 @@ class About extends Component {
 
         this.state = {
             currentIndex: 0,
-            jobsSize: 4
         };
     }
 
-    prevImage = () => {
+    handleChangeImage = (imgsLength, next = false) => {
         let index = this.state.currentIndex;
-        index -= 1;
+        !next ? (index -= 1) : (index += 1);
+    
+        const newIndex = index === imgsLength ? 0 : Math.min(Math.max(index, 0), imgsLength - 1);
 
-        (index <= 0) ?
-            this.setState({currentIndex: 0}):
-            this.setState({currentIndex: index});
-    }
-
-    nextImage = () => {
-        let index = this.state.currentIndex;
-        index += 1;
-
-        let imgsLenght = this.state.jobsSize;
-
-        (index >= imgsLenght) ?
-            this.setState({currentIndex: imgsLenght-1}):
-            this.setState({currentIndex: index});
-    }
+        this.setState({currentIndex: newIndex});
+    };
 
     render() {
         
@@ -69,28 +57,28 @@ class About extends Component {
                                 </h4>
                                 <hr></hr>
                                 <p>
-                                    I'm a front-end web development student 
-                                    loving my learning adventure with React. 
+                                    I'm a frontend developer, I´ve been developing projects using React and 
+                                    React Native also I have experience working with Python and Django. 
                                 </p>
                                 <p>I've been involved in coding for a few years.</p> 
                                 <div className="show-roles">
                                     <div>
-                                        <i className="material-icons roles-left" onClick={this.prevImage}>
+                                        <i className="material-icons roles-left" onClick={() => this.handleChangeImage(involved.length)}>
                                             keyboard_arrow_left
                                         </i>
                                         <span className="roles-name">{currentJob.title}</span>
-                                        <i className="material-icons roles-right" onClick={this.nextImage}>
+                                        <i className="material-icons roles-right" onClick={() => this.handleChangeImage(involved.length, true)}>
                                             keyboard_arrow_right
                                         </i>
                                     </div>
             
-                                    <img src={currentJob.img} alt=""/>
+                                    <img src={currentJob.img} alt="currentJob"/>
                                 </div>
 
                             </div>
             
                             <div className="my-tools">
-                                <h2>Tools I'm using for my projects</h2>
+                                <h2>I have experience using this tools</h2>
                                 <Skills skills={toolsSkills}/>
                             </div>
             
