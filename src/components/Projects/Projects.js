@@ -30,9 +30,9 @@ const Projects = () => {
                 }
 
                 return (
-                    <Fragment>
+                    <div>
                         <h4 className="projects-header">
-                            <span role="img" aria-label="maletin">💼 </span> 
+                            <span role="img" aria-label="maletin">🧪 </span> 
                             Checkout my projects.
                         </h4>
                         <hr className="projects-hr"></hr>
@@ -46,7 +46,7 @@ const Projects = () => {
                                 <img src={logo.img} alt="logo" />
                             </a>
                         </div>
-                    </Fragment>
+                    </div>
                 )
             }}
         </Consumer>

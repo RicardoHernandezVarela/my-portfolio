@@ -68,10 +68,13 @@ class Navigation extends Component {
                             <div className={this.state.navClass}>
                                 <img className="sidenav-img" src={profileImg} alt="profile"/>
                                 <h3>Ricardo Varela</h3>
-                                <h5>Front-end developer</h5>
+                                <h5>Frontend developer</h5>
                                 <ul className="navegacion">
                                     <li>
                                         <NavLink exact to={ROUTES.HOME}>About me</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink exact to={ROUTES.WORK}>Experience</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to={ROUTES.PROJECTS}>Projects</NavLink>
