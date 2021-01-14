@@ -11,7 +11,7 @@ import './Navigation.css';
 import * as ROUTES from '../../constants/routes';
 
 /* Import profile image */
-import profileImg from '../../img/rick.jpg';
+import profileImg from '../../assets/img/drops.jpg';
 
 class Navigation extends Component {
     constructor(props) {

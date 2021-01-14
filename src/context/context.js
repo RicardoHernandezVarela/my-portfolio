@@ -41,7 +41,6 @@ export class Provider extends Component {
         this.firebase.getSiteData().once('value')
           .then(snapshot => {
             const responseData = snapshot.val();
-            console.log('FIREBASE RESPONSE: ', responseData);
             this.setState({...responseData});
           })
           .then(() => this.getTeachingResources())
