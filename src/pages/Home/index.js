@@ -4,20 +4,22 @@ import { BrowserRouter as Router,
         Switch } from 'react-router-dom';
 
 /* Import css */
-import './App.css';
+import './styles.css';
 
 /* Import ROUTES */
 import * as ROUTES from '../../constants/routes';
 
-/* Import components */
-import Navigation from '../Navigation/Navigation';
-import About from '../Home/About';
+/* Import pages */
+import About from '../About';
 import Experience from '../Experience';
-import Projects from '../Projects/Projects';
-import Teaching from '../Teaching/Teaching';
-import Contact from '../Contact/Contact';
+import Projects from '../Projects';
+import Teaching from '../Teaching';
+import Contact from '../Contact';
 
-class App extends React.Component {
+/* Import components */
+import Navigation from '../../components/Navigation';
+
+class Home extends React.Component {
 
   render() {
     return (
@@ -28,7 +30,7 @@ class App extends React.Component {
               <div className="main-content">
                 <div className="header"></div>
                   <Switch>
-                    <Route exact path={ROUTES.HOME} component={About} />
+                    <Route exact path={ROUTES.ABOUT} component={About} />
                     <Route exact path={ROUTES.WORK} component={Experience} />
                     <Route exact path={ROUTES.PROJECTS} component={Projects} />
                     <Route exact path={ROUTES.TEACHING} component={Teaching} />
@@ -41,4 +43,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Home;

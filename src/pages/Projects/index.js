@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 /* Import Context Consumer */
-import { Consumer } from '../../context/context';
+import { Consumer } from '../../context';
 
 /* Import Loader */
-import Loader from '../Loader/Loader';
-import Error from '../Error/Error';
+import Loader from '../../components/Loader';
+import Error from '../../components/Error';
 
 /* Import CSS */
-import './Projects.css';
+import './styles.css';
 
 const Projects = () => {
     return (

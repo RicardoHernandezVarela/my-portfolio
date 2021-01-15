@@ -1,9 +1,7 @@
 import React from 'react';
 
 /* Import CSS */
-import './Contact.css';
-
-/* Import email image */
+import './styles.css';
 
 const Contact = () => {
     return (

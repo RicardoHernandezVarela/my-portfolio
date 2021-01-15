@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 /* Import Consumer Context */
-import { Consumer } from '../../context/context';
+import { Consumer } from '../../context';
 
-/* Import Loader */
-import Loader from '../Loader/Loader';
+/* Import Components */
+import Loader from '../../components/Loader';
+import Error from '../../components/Error';
 
 /* Import CSS */
-import './Teaching.css';
-import Error from '../Error/Error';
+import './styles.css';
 
 class Teaching extends Component {
     constructor() {

@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
 
 /* Import Context Consumer */
-import { Consumer } from '../../context/context';
+import { Consumer } from '../../context';
 
 /* Import Loader */
-import Loader from '../Loader/Loader';
-import Error from '../Error/Error';
+import Loader from '../../components/Loader';
+import Error from '../../components/Error';
 
 /* Import CSS */
-import './About.css';
+import './styles.css';
 
 class About extends Component {
     constructor() {

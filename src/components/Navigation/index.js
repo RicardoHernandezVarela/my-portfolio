@@ -2,10 +2,10 @@ import React, { Component, Fragment } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
 /* Import Context Consumer */
-import { Consumer } from '../../context/context';
+import { Consumer } from '../../context';
 
-/* Importar CSS */
-import './Navigation.css';
+/* Import CSS */
+import './styles.css';
 
 /* Import routes */
 import * as ROUTES from '../../constants/routes';
@@ -71,7 +71,7 @@ class Navigation extends Component {
                                 <h5>Frontend developer</h5>
                                 <ul className="navegacion">
                                     <li>
-                                        <NavLink exact to={ROUTES.HOME}>About me</NavLink>
+                                        <NavLink exact to={ROUTES.ABOUT}>About me</NavLink>
                                     </li>
                                     <li>
                                         <NavLink exact to={ROUTES.WORK}>Experience</NavLink>

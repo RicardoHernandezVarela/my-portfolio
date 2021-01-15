@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /* Import Context Provider */
-import { Provider } from './context/context';
+import { Provider } from './context';
 
 /* Import components */
-import App from './components/App/App';
+import Home from './pages/Home';
 
 ReactDOM.render(
     <Provider>
-        <App />
+        <Home />
     </Provider>, 
     document.getElementById('root'));

@@ -1,10 +1,10 @@
 import React from 'react';
 
 /* Import Context Consumer */
-import { Consumer } from '../../context/context';
+import { Consumer } from '../../context';
 
 /* Import CSS */
-import './Experience.css';
+import './styles.css';
 
 class Experience extends React.Component {
     constructor() {
