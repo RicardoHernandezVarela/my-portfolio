@@ -1,22 +1,17 @@
+/* MAIN CONTAINER STYLES */
+.mainContainer {
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin-top: 40px;
+}
+
 .projects {
     margin: 0 auto;
     margin-top: 10px;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-}
-
-.projects-header {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 50px;
-    font-weight: 500;
-    
-}
-
-.projects-hr {
-    margin-top: -20px;
-    border: 1px solid #707070;
 }
 
 .project {
@@ -90,16 +85,26 @@
     font-size: 0.6em;
 }
 
+.my-github {
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+    padding-bottom: 10px;
+}
+
+.my-github > a > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    margin: 5px auto;
+}
+
 .projects-footer {
     text-align: center;
     margin: 5px auto;
-    padding: 10px;
+    padding-bottom: 5px;
     font-weight: 500;
-}
-
-.my-github {
-    margin-top: 2px;
-    margin-bottom: 20px;
 }
 
 /*****************************************************
@@ -132,16 +137,7 @@
 ****************************************************/
 @media(min-width:320px) {
     .projects {
-        margin-top: 25px;
-    }
-
-    .projects-header, 
-    .projects-footer {
-        font-size: 1.5em;
-    }
-
-    .projects-hr {
-        width: 85%;
+        margin-top: 20px;
     }
 }
 
@@ -150,16 +146,7 @@
         margin-top: 25px;
     }
 
-    .projects-header {
-        margin-top: 55px;
-    }
-
-    .projects-header, 
     .projects-footer {
         font-size: 1.6em;
-    }
-
-    .projects-hr {
-        width: 35%;
     }
 }

@@ -3,7 +3,8 @@ import React from 'react';
 /* Import Context Consumer */
 import { Consumer } from '../../context';
 
-/* Import Loader */
+/* Import Components */
+import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import Error from '../../components/Error';
 
@@ -30,18 +31,21 @@ const Projects = () => {
                 }
 
                 return (
-                    <div>
-                        <h4 className="projects-header">
+                    <div className="mainContainer">
+                        {/* HEADER */}
+                        <Header>
                             <span role="img" aria-label="maletin">🧪 </span> 
-                            Checkout my projects.
-                        </h4>
-                        <hr className="projects-hr"></hr>
+                            Checkout my projects
+                        </Header>
+
+                        {/* MY PROJECTS LIST */}
                         <ProjectsList projectsList={projectsList}/>
 
-                        <h4 className="projects-footer">
-                            Check other projects.
-                        </h4>
-                        <div className="contact-options my-github">
+                        {/* OTHER PROJECTS */}
+                        <div className="my-github">
+                            <h4 className="projects-footer">
+                                Check other projects.
+                            </h4>
                             <a href={logo.url} rel="external">
                                 <img src={logo.img} alt="logo" />
                             </a>

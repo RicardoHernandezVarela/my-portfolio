@@ -3,6 +3,9 @@ import React from 'react';
 /* Import Context Consumer */
 import { Consumer } from '../../context';
 
+/* Import Components */
+import Header from '../../components/Header';
+
 /* Import CSS */
 import './styles.css';
 
@@ -19,12 +22,12 @@ class Experience extends React.Component {
                     const { experience } = context;
 
                     return (
-                        <div className="work-experience">
-                            <h4>
+                        <div className="mainContainer">
+                            {/* HEADER */}
+                            <Header>
                                 <span role="img" aria-label="maletin">💼 </span> 
-                                Work Experience.
-                            </h4>
-                            <hr></hr>
+                                Work Experience
+                            </Header>
                         </div>
                     );
                 }}

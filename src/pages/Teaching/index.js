@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { Consumer } from '../../context';
 
 /* Import Components */
+import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import Error from '../../components/Error';
 
@@ -61,12 +62,19 @@ class Teaching extends Component {
                     }
 
                     return (
-                        <div className="teaching">
-                            <h4>
+                        <div className="mainContainer">
+                            {/* HEADER */}
+                            <Header>
                                 <span role="img" aria-label="maletin">📚 </span> 
-                                Here I share resources of courses I teach and also tutorials.
-                            </h4>
-                            <hr></hr>
+                                Teaching resources
+                            </Header>
+
+                            {/* TITLE */}
+                            <div className="teaching-title">
+                                <h4>
+                                    Here I share resources of courses I teach and also tutorials
+                                </h4>
+                            </div>
 
                             {/* TUTORIALS, CLASS RESOURCES AND CLASS NOTES LISTS */}
                             {teachingResourcesInfo.map((item, index) => (

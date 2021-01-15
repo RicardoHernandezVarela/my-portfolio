@@ -25,10 +25,12 @@ class Home extends React.Component {
     return (
       <div className="app">
           <Router>
+              {/* NAVIGATION SIDE-BAR */}
               <Navigation />
               
+              {/* MAIN CONTENT */}
               <div className="main-content">
-                <div className="header"></div>
+                <div className="top-bar"></div>
                   <Switch>
                     <Route exact path={ROUTES.ABOUT} component={About} />
                     <Route exact path={ROUTES.WORK} component={Experience} />

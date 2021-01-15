@@ -1,50 +1,7 @@
-.work-experience {
+/* MAIN CONTAINER STYLES */
+.mainContainer {
+    width: 100%;
     display: block;
-    padding-top: 20px;
-    margin: 0 auto;
-}
-
-.work-experience > h4 {
-    text-align: center;
-    padding-bottom: 5px;
-    font-weight: 500;
-}
-
-.work-experience > hr {
-    margin-top: -20px;
-    border: 1px solid #707070;
-}
-
-/***************************************************
- Other devices
-***************************************************/
-@media(min-width:320px){
-    .work-experience {
-        margin-top: 40px;
-    }
-
-    .work-experience > h4 {
-        font-size: 1.4em;
-        margin-top: 40px;
-    }
-
-    .work-experience > hr {
-        width: 85%;
-    }
-}
-
-@media(min-width:768px){
-    .work-experience {
-        margin-top: 55px;
-    }
-
-    .work-experience > h4 {
-        font-size: 1.6em;
-        margin-top: 30px;
-        padding-bottom: 0px;
-    }
-
-    .work-experience > hr {
-        width: 30%;
-    }
+    align-items: center;
+    margin-top: 40px;
 }

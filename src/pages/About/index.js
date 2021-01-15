@@ -4,6 +4,7 @@ import React, { Component, Fragment } from 'react';
 import { Consumer } from '../../context';
 
 /* Import Loader */
+import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import Error from '../../components/Error';
 
@@ -49,18 +50,21 @@ class About extends Component {
                     }
 
                     return (
-                        <Fragment>
-                            <div className="profile">
-                                <h4>
-                                    Hi <span role="img" aria-label="hand">👋 </span> 
-                                    I'm Ricardo!!
-                                </h4>
-                                <hr></hr>
+                        <div className="mainContainer">
+                            {/* HEADER */}
+                            <Header>
+                                Hi <span role="img" aria-label="hand">👋 </span> 
+                                I'm Ricardo!!
+                            </Header>
+
+                            {/* PROFILE INFO */}
+                            <section className="profile">
                                 <p>
                                     I'm a frontend developer, I´ve been developing projects using React and 
                                     React Native also I have experience working with Python and Django. 
                                 </p>
                                 <p>I've been coding and teaching to code for a few years.</p> 
+
                                 <div className="show-roles">
                                     <div>
                                         <i className="material-icons roles-left" onClick={() => this.handleChangeImage(involved.length)}>
@@ -74,19 +78,21 @@ class About extends Component {
             
                                     <img src={currentJob.img} alt="currentJob"/>
                                 </div>
-
-                            </div>
-            
-                            <div className="my-tools">
+                            </section>
+                            
+                            {/* MY TOOLBOX */}
+                            <section className="my-tools">
                                 <h2>Tools I have experience with</h2>
                                 <Skills skills={toolsSkills}/>
-                            </div>
-            
-                            <div className="working-on">
+                            </section>
+
+                            {/* WORK EXAMPLES */}
+                            <section className="working-on">
                                 <h2>What I've been working on</h2>
                                 <WorkExperience jobs={experience} />
-                            </div>
+                            </section>
 
+                            {/* MY RESUME */}
                             <section className="resume">
                                 <h2>Download my resume</h2>
                                 <div>
@@ -94,7 +100,7 @@ class About extends Component {
                                     <a href="https://drive.google.com/open?id=1ZwfCnhXd-ciOBIHOB7r9Lr2I4CKW75c7">Spanish</a>
                                 </div>
                             </section>
-                        </Fragment>
+                        </div>
                     )
                 }}
             </Consumer>
@@ -123,7 +129,6 @@ const WorkExperience = (props) => {
     const jobs = props.jobs;
     return (
         <div className="work-experience">
-
             {jobs.map((job, index) => {
                 return (
                     <div className="experience" key={index}>

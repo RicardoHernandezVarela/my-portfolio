@@ -8,12 +8,14 @@
 body {
 	margin: 0;
     padding: 0;
-    background-color: #A4BBCB;
+    background-color: #7fa4c5;
     font-family: 'Playfair Display', serif;
 }
 
 .app {
     width: 100%;
+    height: 100vh;
+    display: block;
     position: absolute;
     margin: 0;
     padding: 0;
@@ -53,15 +55,15 @@ body {
     align-items: center;
 }
 
-.header {
+.top-bar {
     position: fixed;
     width: 100%;
-    height: 40px;
+    height: 50px;
     margin: 0;
     padding: 0;
     background-color: #114B5F;
-    
     z-index: 1;
+    margin-top: -40px;
 }
 
 @media(min-width:320px) {
@@ -74,10 +76,9 @@ body {
     .main-content {
         display: block;
         margin: 0 auto;
-        margin-top: -40px;
     }
 
-    .header {
+    .top-bar {
         border-radius: 0 0 10px 10px;
         box-shadow: -1px 1px 4px 5px rgba(0,0,0,0.2);
     }
@@ -101,10 +102,9 @@ body {
 
     .main-content {
         margin-left: 170px;
-        margin-top: -55px;
     }
 
-    .header {
+    .top-bar {
         border-radius: 0;
         box-shadow: none;
     }

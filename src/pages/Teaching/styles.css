@@ -1,21 +1,22 @@
-.teaching {
+/* MAIN CONTAINER STYLES */
+.mainContainer {
+    width: 100%;
     display: block;
-    padding-top: 20px;
-    margin: 0 auto;
-    padding-bottom: 10px;
+    align-items: center;
+    margin-top: 40px;
 }
 
-.teaching > h4 {
-    text-align: center;
-    padding-top: 5px;
+.teaching-title {
+    width: 80%;
+    display: block;
+    margin: 3px auto;
+}
+
+.teaching-title > h4 {
+    font-size: 1.1em;
     font-weight: 500;
-    
-}
-
-.teaching > hr {
-    margin-top: -15px;
-    margin-bottom: 40px;
-    border: 1px solid #707070;
+    text-align: center;
+    color: #3A3838;
 }
 
 .content {
@@ -161,35 +162,14 @@
  Other devices
 ***************************************************/
 @media(min-width:320px){
-    .teaching {
-        margin-top: 40px;
-    }
-
-    .teaching > h4 {
-        font-size: 1.2em;
-        padding: 10px;
-    }
-
-    .teaching > hr {
-        width: 90%;
-    }
-
     .content {
         width: 70%;
     }
 }
 
 @media(min-width:768px){
-    .teaching {
-        margin-top: 55px;
-    }
-
-    .teaching > h4 {
+    .teaching-title > h4 {
         font-size: 1.4em;
-    }
-
-    .teaching > hr {
-        width: 63%;
     }
 
     .content {
