@@ -2,6 +2,7 @@
     display: block;
     padding-top: 20px;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .teaching > h4 {
@@ -18,8 +19,8 @@
 }
 
 .content {
-    display: block;
     margin: 30px auto;
+    padding-bottom: 15px;
     border-radius: 10px;
     
     display: grid;
@@ -27,18 +28,26 @@
     grid-template-rows: 35px auto;
 }
 
-.active-show {
+.show-button {
     grid-column: 1/2;
     grid-row: 1/2;
     text-align: center;
     border-radius: 20px;
     padding-top: 5px;
-    background-color: #404040;
-    color: #F5F5F5;
     box-shadow: -1px 1px 4px 3px rgba(0,0,0,0.2);
 }
 
-.active-show:hover {
+.show-button-inactive {
+    background-color: #404040;
+    color: #F5F5F5;
+}
+
+.show-button-active {
+    background-color: #F5F5F5;
+    color: #404040;
+}
+
+.show-button:hover {
     cursor: pointer;
 }
 

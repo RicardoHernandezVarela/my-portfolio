@@ -15,21 +15,38 @@ class Teaching extends Component {
         super();
 
         this.state = {
-            tutorials: false,
-            resources: false,
-            notes: false,
+            teachingResourcesInfo: [
+                {
+                    title: 'TUTORIALS',
+                    status: true,
+                },
+                {
+                    title: 'RESOURCES',
+                    status: false,
+                },
+                {
+                    title: 'CLASS NOTES',
+                    status: false,
+                },
+            ],
         }
     }
 
-    handleClick = (elements) => {
-        this.setState({[elements]: !this.state[elements]})
+    handleShowHideList = (index) => {
+        const teachingResourcesInfo = this.state.teachingResourcesInfo;
+        teachingResourcesInfo[index].status = !teachingResourcesInfo[index].status;
+
+        this.setState({teachingResourcesInfo: teachingResourcesInfo});
     }
 
     render() {
+        const {teachingResourcesInfo} = this.state;
+
         return (
             <Consumer>
                 {context => {
                     const { tutorials, resources, notes, loading, error } = context;
+                    const elementsData = [tutorials, resources, notes];
                     
                     if (error) {
                         return (
@@ -50,27 +67,17 @@ class Teaching extends Component {
                                 Here I share resources of courses I teach and also tutorials.
                             </h4>
                             <hr></hr>
-                            <div className="content">
-                                <span className="active-show" onClick={() => this.handleClick('tutorials')}>
-                                    <i className="material-icons">code</i>
-                                </span>
-                                <span className="type">TUTORIALS</span>
-                                <RenderList items={tutorials} element={this.state.tutorials} />
-                            </div>
-                            <div className="content">
-                                <span className="active-show" onClick={() => this.handleClick('resources')}>
-                                    <i className="material-icons">code</i>
-                                </span>
-                                <span className="type">RESOURCES</span>
-                                <RenderList items={resources} element={this.state.resources} />
-                            </div>
-                            <div className="content">
-                                <span className="active-show" onClick={() => this.handleClick('notes')}>
-                                    <i className="material-icons">code</i>
-                                </span>
-                                <span className="type">CLASS NOTES</span>
-                                <RenderList items={notes} element={this.state.notes} />
-                            </div>
+
+                            {/* TUTORIALS, CLASS RESOURCES AND CLASS NOTES LISTS */}
+                            {teachingResourcesInfo.map((item, index) => (
+                                <TeachingComponent
+                                    key={index}
+                                    list={elementsData[index]}
+                                    onClick={() => this.handleShowHideList(index)}
+                                    title={item.title}
+                                    status={item.status}
+                                />
+                            ))}
                         </div>
                     )
                 }}
@@ -79,11 +86,24 @@ class Teaching extends Component {
     }
 }
 
-const RenderList = (props) => {
-    const items = props.items;
-
+const TeachingComponent = ({list, onClick, status, title}) => {
     return (
-        <ul className={props.element ? "show fadeIn": "hide"}> 
+        <div className="content">
+        <span 
+            className={`show-button ${status ? 'show-button-active' : 'show-button-inactive'}`}
+            onClick={onClick}
+        >
+            <i className="material-icons">code</i>
+        </span>
+        <span className="type">{title}</span>
+        <TeachingResourcesList items={list} element={status} />
+    </div>
+    );
+}
+
+const TeachingResourcesList = ({items, element}) => {
+    return (
+        <ul className={element ? "show fadeIn": "hide"}> 
             {items.map((item, key) => {
                 return (
                     <li key={key}>
