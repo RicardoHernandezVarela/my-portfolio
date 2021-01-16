@@ -12,7 +12,6 @@
     text-align: center;
     display: block;
     margin: 5px auto;
-    font-size: 1.5em;
     font-weight: 500;
     border-bottom: 2.5px solid #707070;
     padding-top: 20px;
@@ -25,11 +24,19 @@
     .header {
         width: 81%;
     }
+
+    .header h4 {
+        font-size: 1.5em;
+    }
 }
 
 @media(min-width:500px) {
     .header {
         width: 85%;
+    }
+
+    .header h4 {
+        font-size: 1.9em;
     }
 }
 
@@ -41,7 +48,7 @@
 
 @media(min-width:1000px) {
     .header {
-        width: 31%;
+        width: 35%;
         margin-bottom: 15px;
     }
 }

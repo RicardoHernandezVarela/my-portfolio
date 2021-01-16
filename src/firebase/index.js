@@ -3,7 +3,7 @@ import 'firebase/auth';
 import 'firebase/database';
 
 /* Import Firebase keys */
-import * as KEYS from '../keys';
+import * as KEYS from '../firebaseConfig';
 
 const config = {
     apiKey: KEYS.apiKey,
