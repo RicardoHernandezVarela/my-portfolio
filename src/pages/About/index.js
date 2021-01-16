@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 
 /* Import Context Consumer */
 import { Consumer } from '../../context';
@@ -11,7 +11,7 @@ import Error from '../../components/Error';
 /* Import CSS */
 import './styles.css';
 
-class About extends Component {
+class About extends React.Component {
     constructor() {
         super();
 
@@ -65,7 +65,7 @@ class About extends Component {
                                 </p>
                                 <p>I've been coding and teaching to code for a few years.</p> 
 
-                                <div className="show-roles">
+                                <div className="profile-roles">
                                     <div>
                                         <i className="material-icons roles-left" onClick={() => this.handleChangeImage(involved.length)}>
                                             keyboard_arrow_left
@@ -83,11 +83,11 @@ class About extends Component {
                             {/* MY TOOLBOX */}
                             <section className="my-tools">
                                 <h2>Tools I have experience with</h2>
-                                <Skills skills={toolsSkills}/>
+                                <MyTools skills={toolsSkills}/>
                             </section>
 
                             {/* WORK EXAMPLES */}
-                            <section className="working-on">
+                            <section className="work-experience-container">
                                 <h2>What I've been working on</h2>
                                 <WorkExperience jobs={experience} />
                             </section>
@@ -108,14 +108,12 @@ class About extends Component {
     }
 }
 
-const Skills = (props) => {
-    const skills = props.skills;
-
+const MyTools = ({skills}) => {
     return (
-        <div className="tools-skills">
+        <div className="my-tools-list">
             {skills.map((skill, index) => {
                 return (
-                    <div className="skill-tech" key={index}>
+                    <div className="my-tool" key={index}>
                         <img src={skill.img} alt="react"/>
                         <h4>{skill.name}</h4>
                     </div>
@@ -125,17 +123,16 @@ const Skills = (props) => {
     )
 };
 
-const WorkExperience = (props) => {
-    const jobs = props.jobs;
+const WorkExperience = ({jobs}) => {
     return (
-        <div className="work-experience">
+        <div className="work-experience-list">
             {jobs.map((job, index) => {
                 return (
-                    <div className="experience" key={index}>
-                        <img src={job.img} alt="rick" />
-                        <span className="job-title">{job.title}</span>
+                    <div className="work-experience" key={index}>
+                        <img src={job.img} alt={`exp${index}`} />
+                        <span>{job.title}</span>
                         <p>{job.description}</p>
-                        <h6 className="experience-period">{job.period}</h6> 
+                        <h6>{job.period}</h6> 
                     </div>
                 );
             })
