@@ -1,3 +1,4 @@
+/* PROJECTS LIST STYLES*/
 .projects {
     margin: 0 auto;
     margin-top: 10px;
@@ -77,14 +78,15 @@
     font-size: 0.6em;
 }
 
-.my-github {
+/* OTHER PROJECTS / GITHUB LINK */
+.other-projects {
     width: 100%;
     display: block;
     margin: 5px auto;
     padding-bottom: 10px;
 }
 
-.my-github > a > img {
+.other-projects > a > img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -92,7 +94,7 @@
     margin: 5px auto;
 }
 
-.projects-footer {
+.other-projects > h4 {
     text-align: center;
     margin: 5px auto;
     padding-bottom: 5px;
@@ -138,7 +140,7 @@
         margin-top: 25px;
     }
 
-    .projects-footer {
+    .other-projects > h4 {
         font-size: 1.6em;
     }
 }

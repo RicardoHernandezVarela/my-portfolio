@@ -11,55 +11,54 @@ import Error from '../../components/Error';
 /* Import CSS */
 import './styles.css';
 
-const Projects = () => {
-    return (
-        <Consumer>
-            {context => {
-                const { projectsList, loading, contact, error } = context;
-                const logo = contact[0];
-
-                if (error) {
+class Projects extends React.Component {
+    render() {
+        return (
+            <Consumer>
+                {context => {
+                    const { projectsList, loading, contact, error } = context;
+    
+                    if (error) {
+                        return (
+                            <Error error={error}/>
+                        )
+                    }
+    
+                    if(loading) {
+                        return (
+                            <Loader />
+                        )
+                    }
+    
                     return (
-                        <Error error={error}/>
-                    )
-                }
-
-                if(loading) {
-                    return (
-                        <Loader />
-                    )
-                }
-
-                return (
-                    <div>
-                        {/* HEADER */}
-                        <Header>
-                            <span role="img" aria-label="maletin">🧪 </span> 
-                            Checkout my projects
-                        </Header>
-
-                        {/* MY PROJECTS LIST */}
-                        <ProjectsList projectsList={projectsList}/>
-
-                        {/* OTHER PROJECTS */}
-                        <div className="my-github">
-                            <h4 className="projects-footer">
-                                Check other projects.
-                            </h4>
-                            <a href={logo.url} rel="external">
-                                <img src={logo.img} alt="logo" />
-                            </a>
+                        <div>
+                            {/* HEADER */}
+                            <Header>
+                                <span role="img" aria-label="maletin">🧪 </span> 
+                                Checkout my projects
+                            </Header>
+    
+                            {/* MY PROJECTS LIST */}
+                            <ProjectsList projectsList={projectsList}/>
+    
+                            {/* OTHER PROJECTS */}
+                            <div className="other-projects">
+                                <h4>
+                                    Check other projects.
+                                </h4>
+                                <a href={contact[0].url} rel="external">
+                                    <img src={contact[0].img} alt="logo" />
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                )
-            }}
-        </Consumer>
-    );
+                    )
+                }}
+            </Consumer>
+        );
+    }
 }
 
-const ProjectsList = (props) => {
-    const projectsList = props.projectsList;
-
+const ProjectsList = ({projectsList}) => {
     return (
         <div className="projects">
             {projectsList.map((project, index) => {
@@ -85,12 +84,10 @@ const ProjectsList = (props) => {
     )
 }
 
-const StackList = (props) => {
-    const stack = props.project.stack;
-    return (
-        
+const StackList = ({project}) => {
+    return (      
         <ul>
-            {stack.map((tool, index) => {
+            {project.stack.map((tool, index) => {
                 return (
                     <li key={index}>
                         {tool}
