@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 /* Import Consumer Context */
 import { Consumer } from '../../context';
@@ -11,7 +11,7 @@ import Error from '../../components/Error';
 /* Import CSS */
 import './styles.css';
 
-class Teaching extends Component {
+class Teaching extends React.Component {
     constructor() {
         super();
 
@@ -96,22 +96,22 @@ class Teaching extends Component {
 
 const TeachingComponent = ({list, onClick, status, title}) => {
     return (
-        <div className="content">
-        <span 
-            className={`show-button ${status ? 'show-button-active' : 'show-button-inactive'}`}
-            onClick={onClick}
-        >
-            <i className="material-icons">code</i>
-        </span>
-        <span className="type">{title}</span>
-        <TeachingResourcesList items={list} element={status} />
-    </div>
+        <div className="teaching-component">
+            <span 
+                className={`show-button ${status ? 'show-button-active' : 'show-button-inactive'}`}
+                onClick={onClick}
+            >
+                <i className="material-icons">code</i>
+            </span>
+            <span className="teaching-component-title">{title}</span>
+            <TeachingResourcesList items={list} element={status} />
+        </div>
     );
 }
 
 const TeachingResourcesList = ({items, element}) => {
     return (
-        <ul className={element ? "show fadeIn": "hide"}> 
+        <ul className={element ? "show-resources-list fadeIn": "hide-resources-list"}> 
             {items.map((item, key) => {
                 return (
                     <li key={key}>

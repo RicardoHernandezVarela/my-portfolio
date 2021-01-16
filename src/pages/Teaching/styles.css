@@ -1,3 +1,4 @@
+/* TEACHING TITLE */
 .teaching-title {
     width: 80%;
     display: block;
@@ -11,7 +12,8 @@
     color: #3A3838;
 }
 
-.content {
+/* TEACHING COMPONENT */
+.teaching-component {
     margin: 30px auto;
     padding-bottom: 15px;
     border-radius: 10px;
@@ -21,6 +23,20 @@
     grid-template-rows: 35px auto;
 }
 
+.teaching-component-title {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    border-radius: 20px;
+    margin-left: 15px;
+    padding-top: 7px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #114B5F;
+    color: #F9F9F9;
+    box-shadow: -1px 1px 4px 3px rgba(0,0,0,0.2);
+}
+
+/* SHOW LIST BUTTON */
 .show-button {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -44,20 +60,8 @@
     cursor: pointer;
 }
 
-.type {
-    grid-column: 2/-1;
-    grid-row: 1/2;
-    border-radius: 20px;
-    margin-left: 15px;
-    padding-top: 7px;
-    text-align: center;
-    font-weight: 600;
-    background-color: #114B5F;
-    color: #F9F9F9;
-    box-shadow: -1px 1px 4px 3px rgba(0,0,0,0.2);
-}
-
-.show {
+/* RESOURCES LIST STYLES */
+.show-resources-list {
     grid-column: 1/-1;
     grid-row: 2/-1;
     display: flex;
@@ -67,7 +71,7 @@
     list-style: none;
 }
 
-.show > li {
+.show-resources-list > li {
     margin: 15px auto;
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -79,7 +83,7 @@
     text-align: center;
 }
 
-.show > li > h5 {
+.show-resources-list > li > h5 {
    grid-column: 1/4;
    grid-row: 1/2;
    margin: 0;
@@ -91,7 +95,7 @@
    background-color: #006992;
 }
 
-.show > li > span {
+.show-resources-list > li > span {
    grid-column: 4/-1;
    grid-row: 1/2;
    margin-top: 0px;
@@ -103,7 +107,7 @@
    color: #fff;
 }
 
-.show > li > p {
+.show-resources-list > li > p {
    grid-column: 1/-1;
    grid-row: 2/3;
    display: flex;
@@ -114,7 +118,7 @@
    color: #404040;
 }
 
-.show > li > a {
+.show-resources-list > li > a {
    grid-column: 1/-1;
    grid-row: 3/-1;
    margin: 3px auto;
@@ -125,7 +129,7 @@
    color: #252525;
 }
 
-.hide {
+.hide-resources-list {
     display: none;
 }
 
@@ -154,7 +158,7 @@
  Other devices
 ***************************************************/
 @media(min-width:320px){
-    .content {
+    .teaching-component {
         width: 70%;
     }
 }
@@ -164,11 +168,11 @@
         font-size: 1.4em;
     }
 
-    .content {
+    .teaching-component {
         width: 60%;
     }
 
-    .show > li {
+    .show-resources-list > li {
         width: 400px;
     }
 }
