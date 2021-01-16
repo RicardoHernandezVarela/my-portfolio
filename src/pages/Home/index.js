@@ -23,14 +23,17 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="home">
           <Router>
               {/* NAVIGATION SIDE-BAR */}
               <Navigation />
               
-              {/* MAIN CONTENT */}
-              <div className="main-content">
+              {/* RIGHT CONTAINER */}
+              <div className="right-conteiner">
+                {/* TOP BAR */}
                 <div className="top-bar"></div>
+                {/* MAIN CONTENT */}
+                <div className="main-content">
                   <Switch>
                     <Route exact path={ROUTES.ABOUT} component={About} />
                     <Route exact path={ROUTES.WORK} component={Experience} />
@@ -38,6 +41,7 @@ class Home extends React.Component {
                     <Route exact path={ROUTES.TEACHING} component={Teaching} />
                     <Route exact path={ROUTES.CONTACT} component={Contact} />
                   </Switch>
+                </div>
               </div>
           </Router>
       </div>

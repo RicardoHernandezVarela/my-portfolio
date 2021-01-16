@@ -31,7 +31,7 @@ const Projects = () => {
                 }
 
                 return (
-                    <div className="mainContainer">
+                    <div>
                         {/* HEADER */}
                         <Header>
                             <span role="img" aria-label="maletin">🧪 </span> 

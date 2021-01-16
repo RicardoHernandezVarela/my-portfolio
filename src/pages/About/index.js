@@ -50,7 +50,7 @@ class About extends Component {
                     }
 
                     return (
-                        <div className="mainContainer">
+                        <div>
                             {/* HEADER */}
                             <Header>
                                 Hi <span role="img" aria-label="hand">👋 </span> 

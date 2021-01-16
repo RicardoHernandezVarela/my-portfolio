@@ -22,7 +22,7 @@ class Experience extends React.Component {
                     const { experience } = context;
 
                     return (
-                        <div className="mainContainer">
+                        <div>
                             {/* HEADER */}
                             <Header>
                                 <span role="img" aria-label="maletin">💼 </span> 

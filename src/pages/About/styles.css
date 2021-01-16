@@ -1,11 +1,3 @@
-/* MAIN CONTAINER STYLES */
-.mainContainer {
-    width: 100%;
-    display: block;
-    align-items: center;
-    margin-top: 40px;
-}
-
 /* PROFILE SECTION STYLES */
 .profile {
     display: block;
