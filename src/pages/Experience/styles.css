@@ -1,0 +1,141 @@
+/* JOBS LIST STYLES */
+.jobs-list {
+    display: flex;
+    margin: 5px auto;
+    align-items: center;
+}
+
+/* JOBS ITEM STYLES */
+.jobs-item {
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+    align-items: center;
+    position: relative;
+}
+.jobs-item-header {
+    height: 70px;
+}
+
+.jobs-item-content {
+    position: relative;
+    height: 310px;
+    background-color: #F2F2F2;
+    color: #3A3838;
+}
+
+.jobs-item-content > h5 {
+    margin: 0 auto;
+    margin: 50px 0 5px 0;
+    text-align: center;
+    color: #404040;
+}
+
+.jobs-item-content > h6 {
+    margin: 0 auto;
+    text-align: center;
+    color: #404040;
+}
+
+.jobs-item-content > h4 {
+    font-size: 0.8em;
+    margin: 25px 10px 10px 10px;
+    text-align: center;
+    color: #404040;
+}
+
+.jobs-image-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #F9F9F9;
+    border: gray solid 1px;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jobs-image-container > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    align-self: center;
+    border: gray solid 1px;
+}
+
+.job-view-options {
+    width: 100%;
+    height: 45px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    bottom: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.job-view-options > li {
+    height: 45px;
+    margin: 5px;
+    padding: 0 2px 0 2px;
+    color: #3A3838;
+    align-items: center;
+}
+
+.job-view-options > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+    color: #3A3838;
+}
+
+/*******************************************
+    OTHER DEVICES
+*******************************************/
+@media(min-width:320px) {
+    .jobs-list {
+        flex-flow: column;
+    }
+
+    .jobs-item {
+        width: 75%;
+        margin: 15px auto;
+    }
+}
+
+@media(min-width:500px) {
+    .jobs-list {
+        flex-flow: row;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .jobs-item {
+        width: 55%;
+        margin: 5px 10px;
+    }
+}
+
+@media(min-width:1000px) {
+    .jobs-list {
+        margin-top: 25px;
+    }
+
+    .jobs-item {
+        width: 60%;
+        margin: 15px 15px;
+    }
+}
