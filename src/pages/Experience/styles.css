@@ -7,7 +7,7 @@
 
 /* JOBS ITEM STYLES */
 .jobs-item {
-    height: 380px;
+    height: 400px;
     border-radius: 10px;
     overflow: hidden;
     background-color: #F2F2F2;
@@ -21,7 +21,7 @@
 
 .jobs-item-content {
     position: relative;
-    height: 310px;
+    height: 330px;
     background-color: #F2F2F2;
     color: #3A3838;
 }
@@ -41,7 +41,7 @@
 
 .jobs-item-content > h4 {
     font-size: 0.8em;
-    margin: 25px 10px 10px 10px;
+    margin: 18px 10px 10px 10px;
     text-align: center;
     color: #404040;
 }
@@ -76,7 +76,7 @@
     margin: 0 auto;
     padding: 0;
     position: absolute;
-    bottom: 20%;
+    bottom: 18%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,8 +129,23 @@
     }
 }
 
+@media(min-width:768px) {
+    .jobs-list {
+        flex-flow: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jobs-item {
+        width: 250px;
+        margin: 10px;
+    }
+}
+
 @media(min-width:1000px) {
     .jobs-list {
+        flex-wrap: nowrap;
         margin-top: 25px;
     }
 

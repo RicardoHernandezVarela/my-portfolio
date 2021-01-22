@@ -55,6 +55,16 @@ class Experience extends React.Component {
                             text: "repo",
                             url: "https://github.com/RicardoHernandezVarela/Lesath-Biosignals"
                         },
+                        {
+                            icon: "description",
+                            text: "article",
+                            url: "https://www-optica.inaoep.mx/~tecnologia_salud/acontacs/articulos/2019/MyT2019-184-ECG_low_power_wireless_sensor_with_graphical_interface_data_acquisition_digital_processing_and_event_detection.pdf"
+                        },
+                        {
+                            icon: "description",
+                            text: "article",
+                            url: "https://www-optica.inaoep.mx/~tecnologia_salud/acontacs/articulos/2019/MyT2019-186-Design_and_development_of_a_phonocardiograph_device_with_preliminary_diagnostic_capability_Fin.pdf"
+                        },
                     ],
                 },
                 {
@@ -93,12 +103,11 @@ class Experience extends React.Component {
     }
 
     render() {
-        const {jobs} = this.state;
 
         return (
             <Consumer>
                 {context => {
-                    const { experience } = context;
+                    const { jobs } = context;
 
                     return (
                         <div>

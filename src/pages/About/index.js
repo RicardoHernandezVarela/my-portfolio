@@ -114,7 +114,7 @@ const MyTools = ({skills}) => {
             {skills.map((skill, index) => {
                 return (
                     <div className="my-tool" key={index}>
-                        <img src={skill.img} alt="react"/>
+                        <img src={skill.img} alt={skill.name} />
                         <h4>{skill.name}</h4>
                     </div>
                 );
@@ -132,7 +132,6 @@ const WorkExperience = ({jobs}) => {
                         <img src={job.img} alt={`exp${index}`} />
                         <span>{job.title}</span>
                         <p>{job.description}</p>
-                        <h6>{job.period}</h6> 
                     </div>
                 );
             })

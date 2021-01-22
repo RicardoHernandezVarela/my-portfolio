@@ -16,6 +16,7 @@ export class Provider extends Component {
             tutorials: [],
             resources: [],
             notes: [],
+            jobs: [],
             loading: true,
             error: null
         }
@@ -62,6 +63,7 @@ export class Provider extends Component {
         return (
             <PortfolioContext.Provider value={{
                 ...this.state,
+                firebase: this.firebase,
                 actions: {
                     handleShowNavBar: this.handleShowNavBar
                 }

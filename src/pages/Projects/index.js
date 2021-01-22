@@ -72,9 +72,11 @@ const ProjectsList = ({projectsList}) => {
                             <a href={project.repourl}>
                                 Check repo
                             </a>
-                            <a href={project.site}>
-                                Visit site
-                            </a>
+                            {project.site && (
+                                <a href={project.site}>
+                                    Visit site
+                                </a>
+                            )}
                         </div>
                     </div>
                 );
