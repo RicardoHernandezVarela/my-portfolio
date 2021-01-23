@@ -15,6 +15,7 @@ import Experience from '../Experience';
 import Projects from '../Projects';
 import Teaching from '../Teaching';
 import Contact from '../Contact';
+import MyProfile from '../MyProfile';
 
 /* Import components */
 import Navigation from '../../components/Navigation';
@@ -40,6 +41,7 @@ class Home extends React.Component {
                     <Route exact path={ROUTES.PROJECTS} component={Projects} />
                     <Route exact path={ROUTES.TEACHING} component={Teaching} />
                     <Route exact path={ROUTES.CONTACT} component={Contact} />
+                    <Route exact path={ROUTES.MYPROFILE} component={MyProfile} />
                   </Switch>
                 </div>
               </div>

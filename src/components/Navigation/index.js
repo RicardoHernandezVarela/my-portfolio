@@ -89,9 +89,12 @@ class Navigation extends React.Component {
                                     <li>
                                         <NavLink to={ROUTES.TEACHING}>Teaching</NavLink>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <NavLink to={ROUTES.CONTACT}>Contact</NavLink>
                                     </li>
+                                    <li>
+                                        <NavLink to={ROUTES.MYPROFILE}>My Profile</NavLink>
+                                    </li> */}
                                 </ul>
 
                                 {/* SIDENAV FOOTER */}

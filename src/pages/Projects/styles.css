@@ -4,6 +4,7 @@
     margin-top: 10px;
     display: flex;
     flex-flow: wrap;
+    align-items: center;
     justify-content: center;
 }
 
@@ -140,7 +141,19 @@
         margin-top: 25px;
     }
 
+    .project {
+        width: 250px;
+        height: 450px;
+    }
+
     .other-projects > h4 {
         font-size: 1.6em;
+    }
+}
+
+@media(min-width:100px) {
+    .project {
+        width: 280px;
+        height: 420px;
     }
 }

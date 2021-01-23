@@ -12,6 +12,13 @@
     color: #3A3838;
 }
 
+/* TEACHING LIST */
+.teaching-list {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
 /* TEACHING COMPONENT */
 .teaching-component {
     margin: 30px auto;
@@ -159,7 +166,7 @@
 ***************************************************/
 @media(min-width:320px){
     .teaching-component {
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -169,7 +176,7 @@
     }
 
     .teaching-component {
-        width: 60%;
+        width: 70%;
     }
 
     .show-resources-list > li {

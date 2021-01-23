@@ -77,15 +77,17 @@ class Teaching extends React.Component {
                             </div>
 
                             {/* TUTORIALS, CLASS RESOURCES AND CLASS NOTES LISTS */}
-                            {teachingResourcesInfo.map((item, index) => (
-                                <TeachingComponent
-                                    key={index}
-                                    list={elementsData[index]}
-                                    onClick={() => this.handleShowHideList(index)}
-                                    title={item.title}
-                                    status={item.status}
-                                />
-                            ))}
+                            <div className="teaching-list">
+                                {teachingResourcesInfo.map((item, index) => (
+                                    <TeachingComponent
+                                        key={index}
+                                        list={elementsData[index]}
+                                        onClick={() => this.handleShowHideList(index)}
+                                        title={item.title}
+                                        status={item.status}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     )
                 }}

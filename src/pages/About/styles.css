@@ -63,6 +63,7 @@ i:hover {
 .my-tools {
     text-align: center;
     margin: 20px auto;
+    padding-bottom: 15px;
     color: #252525;
 }
 
@@ -282,7 +283,7 @@ i:hover {
     }
 
     .my-tools-list {
-        width: 60%;
+        width: 75%;
     }
 
     .work-experience-list {
@@ -341,8 +342,8 @@ i:hover {
 
     .profile-roles > img {
         margin-top: 50px;
-        width: 60%;
-        height: 400px;
+        width: 40%;
+        height: auto;
     }
 
     .work-experience-list {

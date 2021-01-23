@@ -80,26 +80,26 @@ class About extends React.Component {
                                 </div>
                             </section>
                             
-                            {/* MY TOOLBOX */}
-                            <section className="my-tools">
-                                <h2>Tools I have experience with</h2>
-                                <MyTools skills={toolsSkills}/>
-                            </section>
-
                             {/* WORK EXAMPLES */}
                             <section className="work-experience-container">
                                 <h2>What I've been working on</h2>
                                 <WorkExperience jobs={experience} />
                             </section>
 
+                            {/* MY TOOLBOX */}
+                            <section className="my-tools">
+                                <h2>Tools I have experience with</h2>
+                                <MyTools skills={toolsSkills}/>
+                            </section>
+
                             {/* MY RESUME */}
-                            <section className="resume">
+                            {/* <section className="resume">
                                 <h2>Download my resume</h2>
                                 <div>
                                     <a href="https://drive.google.com/open?id=161Z-LeKQlhlxf2KIQxESxDGIpHDxFq-Z">English</a>
                                     <a href="https://drive.google.com/open?id=1ZwfCnhXd-ciOBIHOB7r9Lr2I4CKW75c7">Spanish</a>
                                 </div>
-                            </section>
+                            </section> */}
                         </div>
                     )
                 }}
