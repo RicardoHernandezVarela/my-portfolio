@@ -11,7 +11,7 @@ import './styles.css';
 import * as ROUTES from '../../constants/routes';
 
 /* Import profile image */
-import profileImg from '../../assets/img/drops.jpg';
+import profileImg from '../../assets/img/rvlogo.png';
 
 class Navigation extends React.Component {
     constructor(props) {

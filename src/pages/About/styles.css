@@ -63,7 +63,7 @@ i:hover {
 .my-tools {
     text-align: center;
     margin: 20px auto;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
     color: #252525;
 }
 
@@ -248,11 +248,16 @@ i:hover {
 
     .work-experience {
         width: 85%;
-        max-height: 660px;
+        height: 550px;
+        grid-template-rows: 210px 50px 290px;
     }
     
     .work-experience > img {
         height: 210px;
+    }
+
+    .work-experience > span {
+        margin-top: 10px;
     }
 
     .work-experience > p {
@@ -320,12 +325,12 @@ i:hover {
 
     .work-experience {
         width: 65%;
-        height: 480px;
-        grid-template-rows: 220px 40px 220px;
+        height: 430px;
+        grid-template-rows: 220px 45px 165px;
     }
 
     .work-experience > span {
-        margin-top: 10px;
+        margin-top: 15px;
     }
 }
 
@@ -354,8 +359,8 @@ i:hover {
 
     .work-experience {
         width: 29%;
-        height: 550px;
-        grid-template-rows: 250px 40px 260px;
+        height: 475px;
+        grid-template-rows: 250px 40px 185px;
     }
     
     .work-experience > img {
