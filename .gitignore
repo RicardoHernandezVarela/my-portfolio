@@ -15,6 +15,7 @@
 # production
 /build
 /.netlify
+/.firebase
 /.firebaserc
 /firebase.json
 
