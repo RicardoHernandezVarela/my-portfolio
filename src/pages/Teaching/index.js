@@ -72,7 +72,7 @@ class Teaching extends React.Component {
                             {/* TITLE */}
                             <div className="teaching-title">
                                 <h4>
-                                    Here I share resources of courses I teach and also tutorials
+                                    Here I share resources from the courses I teach and also tutorials
                                 </h4>
                             </div>
 
